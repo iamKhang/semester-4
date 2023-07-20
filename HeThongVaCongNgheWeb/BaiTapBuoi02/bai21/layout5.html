@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 5</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(103, 167, 103);
+    }
+
+    header,
+    footer {
+      height: 50px;
+      border-bottom: 1px solid black;
+    }
+
+    nav {
+      height: 25px;
+      border-bottom: 1px solid black;
+    }
+
+    section {
+      height: calc(100vh - 125px);
+      border-bottom: 1px solid black;
+    }
+
+    article {
+      margin-inline: auto;
+      height: 95%;
+      width: 95%;
+      border: 1px solid black;
+      margin-top: 4px;
+      background-color: pink;
+    }
+
+    footer {
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>header</header>
+  <nav>nav</nav>
+  <section>section
+    <article>
+      article
+    </article>
+  </section>
+  <footer>footer</footer>
+</body>
+
+</html>

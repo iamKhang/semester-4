@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+
+    <script src="../lib/bootstrap-5.3.0-alpha1/dist/js/jquery-3.6.4.min.js"></script>
+
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        /* Định dạng các phần tử trong form */
+        form {
+            max-width: 500px;
+            /* giới hạn chiều rộng của form */
+            margin: 0 auto;
+            /* căn giữa form */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            /* khoảng cách giữa các phần tử trong form */
+        }
+
+        label {
+            display: block;
+            /* đặt label trên cùng của input */
+            margin-bottom: 5px;
+            /* khoảng cách giữa label và input */
+        }
+
+        /* Định dạng các input */
+        input {
+            display: block;
+            /* hiển thị input dạng block */
+            width: 100%;
+            /* chiếm hết chiều rộng của form-group */
+            height: 40px;
+            /* chiều cao của input */
+            padding: 6px 12px;
+            /* khoảng cách giữa nội dung và đường viền input */
+            font-size: 14px;
+            /* kích thước chữ trong input */
+            line-height: 1.42857143;
+            /* độ dày của line-height */
+            color: #555;
+            /* màu chữ trong input */
+            background-color: #fff;
+            /* màu nền của input */
+            background-image: none;
+            /* không có hình ảnh nền */
+            border: 1px solid #ccc;
+            /* đường viền của input */
+            border-radius: 4px;
+            /* bo tròn các góc của input */
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            /* tạo bóng cho input */
+            transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            /* hiệu ứng khi hover vào input */
+        }
+
+        input:focus {
+            border-color: #66afe9;
+            /* đổi màu border khi input được focus */
+            outline: 0;
+            /* loại bỏ border khi input được focus */
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+            /* tạo hiệu ứng khi focus vào input */
+        }
+
+        /* Định dạng nút submit */
+        button[type="submit"] {
+            display: block;
+            /* hiển thị nút dạng block */
+            margin-top: 20px;
+            /* khoảng cách giữa nút và phần tử trước đó */
+            width: 100%;
+            /* chiếm hết chiều rộng của form-group */
+            height: 40px;
+            /* chiều cao của nút */
+            font-size: 16px;
+            /* kích thước chữ trong nút */
+            line-height: 1.42857143;
+            /* độ dày của line-height */
+            color: #fff;
+        }
+
+        .error-message {
+            color: red;
+        }
+
+        #register-form {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #ccc;
+            padding: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .social-login-icons {
+            margin-top: 20px;
+        }
+
+        .social-login-icons img {
+            display: inline-block;
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .social-login-icons img:last-child {
+            margin-right: 0;
+        }
+
+
+        .social-login span {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .social-login a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: #f2f2f2;
+            transition: all 0.3s ease;
+        }
+
+        .social-login a i {
+            font-size: 18px;
+            color: #444;
+            transition: all 0.3s ease;
+        }
+
+        .social-login a:hover {
+            background-color: #e2e2e2;
+        }
+
+        .social-login a.facebook:hover i {
+            color: #1877f2;
+        }
+
+        .social-login a.google:hover i {
+            color: #ea4335;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div style="margin-top: 40px; margin-bottom: 40px;">
+        <h2 style="font-weight: 700;">ĐĂNG KÍ TÀI KHOẢN</h2>
+        <form id="register-form">
+            <div class="form-group">
+                <label for="input-firstname">Họ:</label>
+                <input type="text" class="form-control" id="input-firstname" name="firstname">
+                <span class="error-message" id="error-firstname"></span>
+            </div>
+            <div class="form-group">
+                <label for="input-lastname">Tên:</label>
+                <input type="text" class="form-control" id="input-lastname" name="lastname">
+                <span class="error-message" id="error-lastname"></span>
+            </div>
+            <div class="form-group">
+                <label for="input-email">Email:</label>
+                <input type="email" class="form-control" id="input-email" name="email">
+                <span class="error-message" id="error-email"></span>
+            </div>
+            <div class="form-group">
+                <label for="input-phone">Số điện thoại:</label>
+                <input type="tel" class="form-control" id="input-phone" name="phone">
+                <span class="error-message" id="error-phone"></span>
+            </div>
+            <div class="form-group">
+                <label for="input-password">Mật khẩu:</label>
+                <input type="password" class="form-control" id="input-password" name="password">
+                <span class="error-message" id="error-password"></span>
+            </div>
+            <button type="submit" class="btn btn-primary" id="btn-DangKi">Đăng ký</button>
+            <div style="margin-top: 10px;" class="social-login">
+                <span>Hoặc đăng nhập bằng:</span>
+                <a style="text-decoration: none;" href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                <a style="text-decoration: none;" href="#" class="google"><i class="fab fa-google"></i></a>
+            </div>
+        </form>
+
+
+    </div>
+    <footer id="footer"></footer>
+    <script src="../js/index.js" type="module"></script>
+   
+</body>
+
+
+</html>

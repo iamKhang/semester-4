@@ -1,0 +1,92 @@
+{"t":{"$date":"2023-04-10T10:47:01.771+07:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2023-04-10T10:47:01.773+07:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2023-04-10T10:47:01.773+07:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2023-04-10T10:47:01.773+07:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2023-04-10T10:47:01.950+07:00"},"s":"I",  "c":"STORAGE",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":6672,"port":27013,"dbPath":"T:/21083791_LeHoangKhang/data bai tap tuan 09/ReplicaSet/node3","architecture":"64-bit","host":"H41M05"}}
+{"t":{"$date":"2023-04-10T10:47:01.952+07:00"},"s":"I",  "c":"CONTROL",  "id":23398,   "ctx":"initandlisten","msg":"Target operating system minimum version","attr":{"targetMinOS":"Windows 7/Windows Server 2008 R2"}}
+{"t":{"$date":"2023-04-10T10:47:01.952+07:00"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"4.4.4","gitVersion":"8db30a63db1a9d84bdcad0c83369623f708e0397","modules":[],"allocator":"tcmalloc","environment":{"distmod":"windows","distarch":"x86_64","target_arch":"x86_64"}}}}
+{"t":{"$date":"2023-04-10T10:47:01.952+07:00"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Microsoft Windows 10","version":"10.0 (build 19042)"}}}
+{"t":{"$date":"2023-04-10T10:47:01.952+07:00"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{"config":"node3.cfg","net":{"bindIp":"localhost","port":27013},"replication":{"replSetName":"rep21083791"},"security":{"authorization":"enabled","keyFile":"T:\\21083791_LeHoangKhang\\data bai tap tuan 09\\pki\\keyfile"},"storage":{"dbPath":"T:\\21083791_LeHoangKhang\\data bai tap tuan 09\\ReplicaSet\\node3","journal":{"enabled":true}},"systemLog":{"destination":"file","logAppend":true,"path":"T:\\21083791_LeHoangKhang\\data bai tap tuan 09\\ReplicaSet\\node3\\mongod.log"}}}}
+{"t":{"$date":"2023-04-10T10:47:01.954+07:00"},"s":"I",  "c":"STORAGE",  "id":22315,   "ctx":"initandlisten","msg":"Opening WiredTiger","attr":{"config":"create,cache_size=3488M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress,compact_progress],"}}
+{"t":{"$date":"2023-04-10T10:47:01.978+07:00"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1681098421:978153][6672:140730364482896], txn-recover: [WT_VERB_RECOVERY | WT_VERB_RECOVERY_PROGRESS] Set global recovery timestamp: (0, 0)"}}
+{"t":{"$date":"2023-04-10T10:47:01.978+07:00"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1681098421:978153][6672:140730364482896], txn-recover: [WT_VERB_RECOVERY | WT_VERB_RECOVERY_PROGRESS] Set global oldest timestamp: (0, 0)"}}
+{"t":{"$date":"2023-04-10T10:47:01.984+07:00"},"s":"I",  "c":"STORAGE",  "id":4795906, "ctx":"initandlisten","msg":"WiredTiger opened","attr":{"durationMillis":30}}
+{"t":{"$date":"2023-04-10T10:47:01.984+07:00"},"s":"I",  "c":"RECOVERY", "id":23987,   "ctx":"initandlisten","msg":"WiredTiger recoveryTimestamp","attr":{"recoveryTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+{"t":{"$date":"2023-04-10T10:47:01.997+07:00"},"s":"I",  "c":"STORAGE",  "id":4366408, "ctx":"initandlisten","msg":"No table logging settings modifications are required for existing WiredTiger tables","attr":{"loggingEnabled":false}}
+{"t":{"$date":"2023-04-10T10:47:01.998+07:00"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten","msg":"Timestamp monitor starting"}
+{"t":{"$date":"2023-04-10T10:47:02.006+07:00"},"s":"I",  "c":"STORAGE",  "id":20536,   "ctx":"initandlisten","msg":"Flow Control is enabled on this deployment"}
+{"t":{"$date":"2023-04-10T10:47:02.007+07:00"},"s":"I",  "c":"SHARDING", "id":20997,   "ctx":"initandlisten","msg":"Refreshed RWC defaults","attr":{"newDefaults":{}}}
+{"t":{"$date":"2023-04-10T10:47:02.007+07:00"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"initandlisten","msg":"createCollection","attr":{"namespace":"local.startup_log","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"664b1225-22ea-4b6e-89bc-8150cd5026a3"}},"options":{"capped":true,"size":10485760}}}
+{"t":{"$date":"2023-04-10T10:47:02.014+07:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"initandlisten","msg":"Index build: done building","attr":{"buildUUID":null,"namespace":"local.startup_log","index":"_id_","commitTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+{"t":{"$date":"2023-04-10T10:47:02.143+07:00"},"s":"I",  "c":"FTDC",     "id":20625,   "ctx":"initandlisten","msg":"Initializing full-time diagnostic data capture","attr":{"dataDirectory":"T:/21083791_LeHoangKhang/data bai tap tuan 09/ReplicaSet/node3/diagnostic.data"}}
+{"t":{"$date":"2023-04-10T10:47:02.144+07:00"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"initandlisten","msg":"createCollection","attr":{"namespace":"local.replset.oplogTruncateAfterPoint","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"7d77031c-a1f1-45c5-9c0b-2fb9d10c9c8d"}},"options":{}}}
+{"t":{"$date":"2023-04-10T10:47:02.154+07:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"initandlisten","msg":"Index build: done building","attr":{"buildUUID":null,"namespace":"local.replset.oplogTruncateAfterPoint","index":"_id_","commitTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+{"t":{"$date":"2023-04-10T10:47:02.154+07:00"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"initandlisten","msg":"createCollection","attr":{"namespace":"local.replset.minvalid","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"63412b1d-ff9f-4944-a6c8-1b9ba106a2f0"}},"options":{}}}
+{"t":{"$date":"2023-04-10T10:47:02.170+07:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"initandlisten","msg":"Index build: done building","attr":{"buildUUID":null,"namespace":"local.replset.minvalid","index":"_id_","commitTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+{"t":{"$date":"2023-04-10T10:47:02.170+07:00"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"initandlisten","msg":"createCollection","attr":{"namespace":"local.replset.election","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"24d6f303-368a-4b4d-9d8b-0a9539945c4d"}},"options":{}}}
+{"t":{"$date":"2023-04-10T10:47:02.183+07:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"initandlisten","msg":"Index build: done building","attr":{"buildUUID":null,"namespace":"local.replset.election","index":"_id_","commitTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+{"t":{"$date":"2023-04-10T10:47:02.183+07:00"},"s":"I",  "c":"REPL",     "id":21311,   "ctx":"initandlisten","msg":"Did not find local initialized voted for document at startup"}
+{"t":{"$date":"2023-04-10T10:47:02.183+07:00"},"s":"I",  "c":"REPL",     "id":21312,   "ctx":"initandlisten","msg":"Did not find local Rollback ID document at startup. Creating one"}
+{"t":{"$date":"2023-04-10T10:47:02.183+07:00"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"initandlisten","msg":"createCollection","attr":{"namespace":"local.system.rollback.id","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"5504f479-3fc5-4a1e-831f-5daf8833bae2"}},"options":{}}}
+{"t":{"$date":"2023-04-10T10:47:02.192+07:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"initandlisten","msg":"Index build: done building","attr":{"buildUUID":null,"namespace":"local.system.rollback.id","index":"_id_","commitTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+{"t":{"$date":"2023-04-10T10:47:02.192+07:00"},"s":"I",  "c":"REPL",     "id":21531,   "ctx":"initandlisten","msg":"Initialized the rollback ID","attr":{"rbid":1}}
+{"t":{"$date":"2023-04-10T10:47:02.192+07:00"},"s":"I",  "c":"REPL",     "id":21313,   "ctx":"initandlisten","msg":"Did not find local replica set configuration document at startup","attr":{"error":{"code":47,"codeName":"NoMatchingDocument","errmsg":"Did not find replica set configuration document in local.system.replset"}}}
+{"t":{"$date":"2023-04-10T10:47:02.193+07:00"},"s":"I",  "c":"CONTROL",  "id":20714,   "ctx":"LogicalSessionCacheRefresh","msg":"Failed to refresh session cache, will try again at the next refresh interval","attr":{"error":"NotYetInitialized: Replication has not yet been configured"}}
+{"t":{"$date":"2023-04-10T10:47:02.194+07:00"},"s":"I",  "c":"REPL",     "id":40440,   "ctx":"initandlisten","msg":"Starting the TopologyVersionObserver"}
+{"t":{"$date":"2023-04-10T10:47:02.194+07:00"},"s":"I",  "c":"CONTROL",  "id":20712,   "ctx":"LogicalSessionCacheReap","msg":"Sessions collection is not set up; waiting until next sessions reap interval","attr":{"error":"NamespaceNotFound: config.system.sessions does not exist"}}
+{"t":{"$date":"2023-04-10T10:47:02.194+07:00"},"s":"I",  "c":"REPL",     "id":40445,   "ctx":"TopologyVersionObserver","msg":"Started TopologyVersionObserver"}
+{"t":{"$date":"2023-04-10T10:47:02.194+07:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"127.0.0.1"}}
+{"t":{"$date":"2023-04-10T10:47:02.194+07:00"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27013,"ssl":"off"}}
+{"t":{"$date":"2023-04-10T10:48:35.234+07:00"},"s":"I",  "c":"CONTROL",  "id":23373,   "ctx":"thread1","msg":"CTRL_CLOSE_EVENT signal"}
+{"t":{"$date":"2023-04-10T10:48:35.234+07:00"},"s":"I",  "c":"CONTROL",  "id":23371,   "ctx":"consoleTerminate","msg":"Received event, will terminate after current command ends","attr":{"controlCode":"CTRL_CLOSE_EVENT"}}
+{"t":{"$date":"2023-04-10T10:48:35.235+07:00"},"s":"I",  "c":"REPL",     "id":4784900, "ctx":"consoleTerminate","msg":"Stepping down the ReplicationCoordinator for shutdown","attr":{"waitTimeMillis":10000}}
+{"t":{"$date":"2023-04-10T10:48:35.235+07:00"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"consoleTerminate","msg":"Shutting down the MirrorMaestro"}
+{"t":{"$date":"2023-04-10T10:48:35.235+07:00"},"s":"I",  "c":"REPL",     "id":40441,   "ctx":"consoleTerminate","msg":"Stopping TopologyVersionObserver"}
+{"t":{"$date":"2023-04-10T10:48:35.235+07:00"},"s":"I",  "c":"REPL",     "id":40447,   "ctx":"TopologyVersionObserver","msg":"Stopped TopologyVersionObserver"}
+{"t":{"$date":"2023-04-10T10:48:35.235+07:00"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"consoleTerminate","msg":"Shutting down the WaitForMajorityService"}
+{"t":{"$date":"2023-04-10T10:48:35.235+07:00"},"s":"I",  "c":"CONTROL",  "id":4784903, "ctx":"consoleTerminate","msg":"Shutting down the LogicalSessionCache"}
+{"t":{"$date":"2023-04-10T10:48:35.235+07:00"},"s":"I",  "c":"NETWORK",  "id":20562,   "ctx":"consoleTerminate","msg":"Shutdown: going to close listening sockets"}
+{"t":{"$date":"2023-04-10T10:48:35.235+07:00"},"s":"I",  "c":"NETWORK",  "id":4784905, "ctx":"consoleTerminate","msg":"Shutting down the global connection pool"}
+{"t":{"$date":"2023-04-10T10:48:35.235+07:00"},"s":"I",  "c":"STORAGE",  "id":4784906, "ctx":"consoleTerminate","msg":"Shutting down the FlowControlTicketholder"}
+{"t":{"$date":"2023-04-10T10:48:35.235+07:00"},"s":"I",  "c":"-",        "id":20520,   "ctx":"consoleTerminate","msg":"Stopping further Flow Control ticket acquisitions."}
+{"t":{"$date":"2023-04-10T10:48:35.235+07:00"},"s":"I",  "c":"REPL",     "id":4784907, "ctx":"consoleTerminate","msg":"Shutting down the replica set node executor"}
+{"t":{"$date":"2023-04-10T10:48:35.236+07:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"ReplNodeDbWorkerNetwork","msg":"Killing all outstanding egress activity."}
+{"t":{"$date":"2023-04-10T10:48:35.236+07:00"},"s":"I",  "c":"STORAGE",  "id":4784908, "ctx":"consoleTerminate","msg":"Shutting down the PeriodicThreadToAbortExpiredTransactions"}
+{"t":{"$date":"2023-04-10T10:48:35.236+07:00"},"s":"I",  "c":"STORAGE",  "id":4784934, "ctx":"consoleTerminate","msg":"Shutting down the PeriodicThreadToDecreaseSnapshotHistoryCachePressure"}
+{"t":{"$date":"2023-04-10T10:48:35.236+07:00"},"s":"I",  "c":"REPL",     "id":4784909, "ctx":"consoleTerminate","msg":"Shutting down the ReplicationCoordinator"}
+{"t":{"$date":"2023-04-10T10:48:35.236+07:00"},"s":"I",  "c":"REPL",     "id":21328,   "ctx":"consoleTerminate","msg":"Shutting down replication subsystems"}
+{"t":{"$date":"2023-04-10T10:48:35.236+07:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"ReplNetwork","msg":"Killing all outstanding egress activity."}
+{"t":{"$date":"2023-04-10T10:48:35.236+07:00"},"s":"I",  "c":"SHARDING", "id":4784910, "ctx":"consoleTerminate","msg":"Shutting down the ShardingInitializationMongoD"}
+{"t":{"$date":"2023-04-10T10:48:35.236+07:00"},"s":"I",  "c":"REPL",     "id":4784911, "ctx":"consoleTerminate","msg":"Enqueuing the ReplicationStateTransitionLock for shutdown"}
+{"t":{"$date":"2023-04-10T10:48:35.236+07:00"},"s":"I",  "c":"-",        "id":4784912, "ctx":"consoleTerminate","msg":"Killing all operations for shutdown"}
+{"t":{"$date":"2023-04-10T10:48:35.236+07:00"},"s":"I",  "c":"-",        "id":4695300, "ctx":"consoleTerminate","msg":"Interrupted all currently running operations","attr":{"opsKilled":4}}
+{"t":{"$date":"2023-04-10T10:48:35.236+07:00"},"s":"I",  "c":"COMMAND",  "id":4784913, "ctx":"consoleTerminate","msg":"Shutting down all open transactions"}
+{"t":{"$date":"2023-04-10T10:48:35.236+07:00"},"s":"I",  "c":"REPL",     "id":4784914, "ctx":"consoleTerminate","msg":"Acquiring the ReplicationStateTransitionLock for shutdown"}
+{"t":{"$date":"2023-04-10T10:48:35.236+07:00"},"s":"I",  "c":"INDEX",    "id":4784915, "ctx":"consoleTerminate","msg":"Shutting down the IndexBuildsCoordinator"}
+{"t":{"$date":"2023-04-10T10:48:35.236+07:00"},"s":"I",  "c":"REPL",     "id":4784916, "ctx":"consoleTerminate","msg":"Reacquiring the ReplicationStateTransitionLock for shutdown"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"REPL",     "id":4784917, "ctx":"consoleTerminate","msg":"Attempting to mark clean shutdown"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"NETWORK",  "id":4784918, "ctx":"consoleTerminate","msg":"Shutting down the ReplicaSetMonitor"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"REPL",     "id":4784920, "ctx":"consoleTerminate","msg":"Shutting down the LogicalTimeValidator"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"SHARDING", "id":4784921, "ctx":"consoleTerminate","msg":"Shutting down the MigrationUtilExecutor"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"CONTROL",  "id":4784925, "ctx":"consoleTerminate","msg":"Shutting down free monitoring"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"CONTROL",  "id":20609,   "ctx":"consoleTerminate","msg":"Shutting down free monitoring"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"STORAGE",  "id":4784927, "ctx":"consoleTerminate","msg":"Shutting down the HealthLog"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"STORAGE",  "id":4784929, "ctx":"consoleTerminate","msg":"Acquiring the global lock for shutdown"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"STORAGE",  "id":4784930, "ctx":"consoleTerminate","msg":"Shutting down the storage engine"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"STORAGE",  "id":20282,   "ctx":"consoleTerminate","msg":"Deregistering all the collections"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"STORAGE",  "id":22261,   "ctx":"consoleTerminate","msg":"Timestamp monitor shutting down"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"STORAGE",  "id":22317,   "ctx":"consoleTerminate","msg":"WiredTigerKVEngine shutting down"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"STORAGE",  "id":22318,   "ctx":"consoleTerminate","msg":"Shutting down session sweeper thread"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"STORAGE",  "id":22319,   "ctx":"consoleTerminate","msg":"Finished shutting down session sweeper thread"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"STORAGE",  "id":22320,   "ctx":"consoleTerminate","msg":"Shutting down journal flusher thread"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"STORAGE",  "id":22321,   "ctx":"consoleTerminate","msg":"Finished shutting down journal flusher thread"}
+{"t":{"$date":"2023-04-10T10:48:35.237+07:00"},"s":"I",  "c":"STORAGE",  "id":22322,   "ctx":"consoleTerminate","msg":"Shutting down checkpoint thread"}
+{"t":{"$date":"2023-04-10T10:48:35.238+07:00"},"s":"I",  "c":"STORAGE",  "id":22323,   "ctx":"consoleTerminate","msg":"Finished shutting down checkpoint thread"}
+{"t":{"$date":"2023-04-10T10:48:35.238+07:00"},"s":"I",  "c":"STORAGE",  "id":4795902, "ctx":"consoleTerminate","msg":"Closing WiredTiger","attr":{"closeConfig":"leak_memory=true,"}}
+{"t":{"$date":"2023-04-10T10:48:35.481+07:00"},"s":"I",  "c":"STORAGE",  "id":4795901, "ctx":"consoleTerminate","msg":"WiredTiger closed","attr":{"durationMillis":243}}
+{"t":{"$date":"2023-04-10T10:48:35.481+07:00"},"s":"I",  "c":"STORAGE",  "id":22281,   "ctx":"consoleTerminate","msg":"shutdown: removing fs lock..."}
+{"t":{"$date":"2023-04-10T10:48:35.481+07:00"},"s":"I",  "c":"-",        "id":4784931, "ctx":"consoleTerminate","msg":"Dropping the scope cache for shutdown"}
+{"t":{"$date":"2023-04-10T10:48:35.481+07:00"},"s":"I",  "c":"FTDC",     "id":4784926, "ctx":"consoleTerminate","msg":"Shutting down full-time data capture"}
+{"t":{"$date":"2023-04-10T10:48:35.481+07:00"},"s":"I",  "c":"FTDC",     "id":20626,   "ctx":"consoleTerminate","msg":"Shutting down full-time diagnostic data capture"}
+{"t":{"$date":"2023-04-10T10:48:35.482+07:00"},"s":"I",  "c":"CONTROL",  "id":20565,   "ctx":"consoleTerminate","msg":"Now exiting"}
+{"t":{"$date":"2023-04-10T10:48:35.483+07:00"},"s":"I",  "c":"CONTROL",  "id":23138,   "ctx":"consoleTerminate","msg":"Shutting down","attr":{"exitCode":12}}

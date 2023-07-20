@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+        }
+        
+        #Container {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        #Navigation-bar {
+            width: 4%;
+        }
+        
+        #Main-area {
+            flex: 1;
+            /* background-color: #AA77FF; */
+        }
+        
+        #Live-chat-box {
+            width: 20%;
+            background-color: #C9EEFF;
+        }
+        
+        #Navigation-bar {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+        
+        #Navigation-bar_menu,
+        #User-menu {
+            justify-content: right;
+            margin-top: 20px;
+        }
+        
+        .title {
+            font-size: 40px;
+        }
+        
+        #Main_Header {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .meeting-information {
+            display: flex;
+        }
+        
+        .frame-yourself {
+            height: 50%;
+            background-image: url(../BaiTapTH_Tuan_04_Web/img_big.png);
+        }
+        
+        #frame-friend_item1 {
+            height: 160px;
+            width: 264px;
+            background-image: url(../BaiTapTH_Tuan_04_Web/img.png);
+        }
+        
+        #frame-friend_item2 {
+            height: 160px;
+            width: 264px;
+            background-image: url(../BaiTapTH_Tuan_04_Web/img1.png);
+        }
+        
+        #frame-friend_item3 {
+            height: 160px;
+            width: 264px;
+            background-image: url(../BaiTapTH_Tuan_04_Web/img2.png);
+        }
+        
+        #frame-friend {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+        
+        #function-bar {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .funtion-bar_item {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        
+        #parcitypants {
+            margin-top: 20px;
+        }
+        
+        #particypants_header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .participant_list-item{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+    <script>
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+        document.getElementById("Curren-date").innerHTML = time;
+    </script>
+
+</head>
+
+<body>
+    <div id="Container">
+        <div id="Navigation-bar">
+            <div id="Navigation-bar_menu">
+                <div id="logo">
+                    <img src="../BaiTapTH_Tuan_04_Web/logo.png" alt="">
+                </div>
+                <div class="Navigation-bar_menu-item">
+                    <a href=""><img src="../BaiTapTH_Tuan_04_Web/home.png" alt=""></a>
+                </div>
+                <div class="Navigation-bar_menu-item">
+                    <a href=""><img src="../BaiTapTH_Tuan_04_Web/chatting.png" alt=""></a>
+                </div>
+                <div class="Navigation-bar_menu-item">
+                    <a href=""><img src="../BaiTapTH_Tuan_04_Web/calender.png" alt=""></a>
+                </div>
+                <div class="Navigation-bar_menu-item">
+                    <a href=""><img src="../BaiTapTH_Tuan_04_Web/cam.png" alt=""></a>
+                </div>
+                <div class="Navigation-bar_menu-item">
+                    <a href=""><img src="../BaiTapTH_Tuan_04_Web/user.png" alt=""></a>
+                </div>
+            </div>
+
+
+            <div id="User-menu">
+                <div class="User-menu_item">
+                    <a href=""><img src="../BaiTapTH_Tuan_04_Web/avatar.png" alt=""></a>
+                </div>
+                <div class="User-menu_item">
+                    <a href=""><img src="../BaiTapTH_Tuan_04_Web/setting.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div id="Main-area">
+            <div id="Main_Header">
+                <div>
+                    <h1 class="title">Meeting title</h1>
+                </div>
+                <div><img src="../BaiTapTH_Tuan_04_Web/Time-record.PNG" alt=""></div>
+            </div>
+            <div class="meeting-information">
+                <div class="internal">
+                    div
+                </div>
+                <div class="date">
+                    <img src="../BaiTapTH_Tuan_04_Web/calender_small.png" alt="">
+                    <p style="display: inline-block;">Sep 02, 2022</p>
+                </div>
+            </div>
+            <div class="frame-yourself">
+                <div class="name">
+
+                </div>
+            </div>
+            <div id="frame-friend">
+                <div id="frame-friend_item1"></div>
+                <div id="frame-friend_item2"></div>
+                <div id="frame-friend_item3"></div>
+            </div>
+
+            <div id="function-bar">
+                <div class="funtion-bar_item">
+                    <a href=""><img src="../BaiTapTH_Tuan_04_Web/mic_grey_color.png" alt=""></a>
+                </div>
+                <div class="funtion-bar_item">
+                    <a href=""><img src="../BaiTapTH_Tuan_04_Web/cam_color.png" alt=""></a>
+                </div>
+                <div class="funtion-bar_item">
+                    <a href=""><img src="../BaiTapTH_Tuan_04_Web/speaker_grey_color.png" alt=""></a>
+                </div>
+                <div class="funtion-bar_item">
+                    <a href=""><img src="../BaiTapTH_Tuan_04_Web/end meetting.PNG" alt=""></a>
+                </div>
+                <div class="funtion-bar_item">
+                    <a href=""><img src="../BaiTapTH_Tuan_04_Web/Button 2179.png" alt=""></a>
+                </div>
+                <div class="funtion-bar_item">
+                    <a href=""><img src="../BaiTapTH_Tuan_04_Web/share.png" alt=""></a>
+                </div>
+                <div class="funtion-bar_item">
+                    <a href=""><img src="../BaiTapTH_Tuan_04_Web/cham cham cham.png" alt=""></a>
+                </div>
+            </div>
+
+        </div>
+        <div id="Live-chat-box">
+            <div id="parcitypants">
+                <div id="particypants_header">
+                    <div>
+                        <h1 class="title">Particypants</h1>
+                    </div>
+                    <div><input style="background-color: pink; width: 100px; height: 100%; border-radius: 50px;" type="submit" value="+ Add"></div>
+                </div>
+
+                <div id="participant_list">
+                    <div class="participant_list-item">
+                        <div class="particypants_list-item_user">
+                            <img src="../BaiTapTH_Tuan_04_Web/avatar 1322.png" alt="">
+                            <p></p>
+                        </div>
+                        <div class="particypants_list-item-nav">
+                            <a href=""><img src="../BaiTapTH_Tuan_04_Web/mic1.png" alt=""></a>
+                            <a href=""><img src="../BaiTapTH_Tuan_04_Web/cam_small.png" alt=""></a>
+                            <a href=""><img src="../BaiTapTH_Tuan_04_Web/chãm3.PNG" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="participant_list-item">
+                        <div class="particypants_list-item_user">
+                            <img src="../BaiTapTH_Tuan_04_Web/avatar 1323.png" alt="">
+                            <p></p>
+                        </div>
+                        <div class="particypants_list-item-nav">
+                            <a href=""><img src="../BaiTapTH_Tuan_04_Web/mic1.png" alt=""></a>
+                            <a href=""><img src="../BaiTapTH_Tuan_04_Web/cam_small.png" alt=""></a>
+                            <a href=""><img src="../BaiTapTH_Tuan_04_Web/chãm3.PNG" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="participant_list-item">
+                        <div class="particypants_list-item_user">
+                            <img src="../BaiTapTH_Tuan_04_Web/avatar 1324.png" alt="">
+                            <p></p>
+                        </div>
+                        <div class="particypants_list-item-nav">
+                            <a href=""><img src="../BaiTapTH_Tuan_04_Web/mic1.png" alt=""></a>
+                            <a href=""><img src="../BaiTapTH_Tuan_04_Web/cam_small.png" alt=""></a>
+                            <a href=""><img src="../BaiTapTH_Tuan_04_Web/chãm3.PNG" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="participant_list-item">
+                        <div class="particypants_list-item_user">
+                            <img src="../BaiTapTH_Tuan_04_Web/avatar 1325.png" alt="">
+                            <p></p>
+                        </div>
+                        <div class="particypants_list-item-nav">
+                            <a href=""><img src="../BaiTapTH_Tuan_04_Web/mic1.png" alt=""></a>
+                            <a href=""><img src="../BaiTapTH_Tuan_04_Web/cam_small.png" alt=""></a>
+                            <a href=""><img src="../BaiTapTH_Tuan_04_Web/chãm3.PNG" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .formlogin{
+            font-family: Arial, Helvetica, sans-serif;
+            display: grid;
+            grid-template-columns: 45% 55%;
+            width: 800px;
+            border: 1px solid rgba(128, 128, 128, 0.601);
+            height: 460px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .left{
+            margin: 0;
+            border-right: 1px solid rgba(128, 128, 128, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+        .left button{
+            width: 250px ;
+            height: 50px;
+            margin-top: 30px;
+            margin-left: 10px;
+            border-radius: 8px;
+            border: 0px;
+            color: white;
+        }
+        .left p{
+            margin-top: 10px;
+        }
+        .btn_facebook{
+            background-color: rgb(65, 90, 150);
+        }
+        .btn_facebook a:hover{
+            background-color: #4f77ff;
+        }
+        .btn_google{
+            background-color: rgb(180, 60, 35);
+        }
+        .right{
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+        .right input{
+            width: 350px;
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid rgba(128, 128, 128, 0.6);
+            padding-left: 10px;
+            margin-top: 20px;
+
+        }
+        button:hover{
+            opacity: .9;
+        }
+        .right button{
+            width: 350px;
+            height: 50px;
+            border: 0px;
+            border-radius: 20px;
+            color: white;
+            background-color: rgb(34,80,62);
+        }
+        a{
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .rememberpass_checkbox{
+            width: 350px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            
+        }
+        .rememberpass_checkbox input{
+            width: 20px;
+            margin: 0;
+        }
+        .rememberpass{
+            margin: 0;
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+            width: 150px;
+        }
+        .btn_login {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header"></header>
+    <div class="container">
+        <div class="formlogin">
+            <div class="left">
+                <h3>DoubleKPerfume</h3>
+                <p>Đăng nhập nhanh bằng tài khoản khác</p>
+                <button class="btn_facebook">Facebook</button>
+                <button class="btn_google">Google</button>
+            </div>
+            <div class="right">
+                <h3>Đăng nhập</h3>
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Password">
+                <div class="rememberpass_checkbox">
+                    <div class="rememberpass"><input type="checkbox" name="" id=""> Nhớ mật khẩu</div>
+                    <a href="">Quên mật khẩu</a>
+                </div>
+                <div class="btn_login">
+                    <button>Login</button> <br>
+                    <a href="../html/dangKi.html">Đăng ký</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="../js/index.js" type="module"></script>
+</body>
+</html>

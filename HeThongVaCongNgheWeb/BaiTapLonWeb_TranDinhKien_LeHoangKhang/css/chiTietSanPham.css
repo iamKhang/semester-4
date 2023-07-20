@@ -1,0 +1,149 @@
+.container {
+    margin-top: 40px;
+}
+
+table {
+    border: none;
+}
+
+.table th,
+.table td {
+    border: none;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+#minus-btn,
+#plus-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#minus-btn:hover,
+#plus-btn:hover {
+    background-color: #e8e8e8;
+}
+
+#quantity {
+    width: 50px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+.table-bordered td,
+.table-bordered th {
+    border: none;
+}
+
+#quantity {
+    text-align: center;
+}
+
+.table-bordered td,
+.table-bordered th {
+    border: none;
+}
+
+
+
+.btn-buy {
+    background-color: rgb(34,80,62);
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-cart {
+    background-color: rgb(34,80,62);
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-buy:hover,
+.btn-cart:hover {
+    opacity: 0.8;
+    border: 1px solid black;
+}
+
+.gender {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    /* để border vừa với nội dung */
+    line-height: 1;
+    /* để text không bị dịch lên/kéo dài ra vượt qua border */
+}
+
+
+.rating{
+    color: gold;
+}
+.image-child{
+    display: flex;
+    justify-content: space-around;
+}
+.img-fluid{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(34,80,62);
+    object-fit: cover;
+}
+#main-image{
+    margin-top: 20px;
+    width: 380px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.item-img{
+    border: 1px solid rgb(34,80,62);
+    width: 100%;
+}
+.items{
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+.items .item-image{
+    margin: 0;
+}
+.items .item-tt{
+    width: 80%;
+}
+.item-tt th{
+    width: 130px;
+}
+.item-section{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.item-section .name{
+    margin-top: 20px;
+    font-size: 22px;
+}
+.nav-item a{
+    color: black;
+    font-size: 18px;
+}

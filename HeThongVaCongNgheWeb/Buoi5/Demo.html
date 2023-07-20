@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var n, m, i, j;
+        m = prompt("Nhap so dong");
+        n = prompt("Nhap so cot");
+        document.write("<table width=50% border=1>");
+        for (i = 1; i <= m; i++) {
+            document.write("<tr>");
+            for (j = 1; j <= n; j++)
+                document.write("<td>" + i + j + "</td>");
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+        var txt1 = "Hello World"
+        var txt2 = "khang";
+        document.write(txt1 + txt2);
+
+        var D = new Date();
+        document.write("" + D.getHours() + "" + D.getMinutes() + D.getDate+"/"+D.getMonth+"/"+D.get);
+         
+    </script>
+</body>
+
+</html>

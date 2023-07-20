@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoubleKPerfume</title>
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+<body>
+        <header id="header"></header>
+        <div id="myCarousel"></div>
+        <main class="container">
+            <div id="products">
+               
+            </div>
+
+            <div class="owl-stage">
+                <h3 class="owl-title">Thông tin</h3>
+                <div class="owl-items">
+                    <div class="owl-item" style="margin-left: 10px;">
+                        <img src="../img/nuoc-hoa-dung-duoc-cho-ca-nam-va-nu.png" alt="">
+                        <h4>5 mùi nước hoa dùng được cho cả nam và nữ mà bạn không nên bỏ qua</h4>
+                        <p>Bạn có biết? Mùi nước hoa chính là điểm cuốn hút và ghi đậm dấu ấn với mọi người...</p>
+                    </div>
+                    <div class="owl-item">
+                        <img src="../img/nuoc-hoa-thom-lau-cho-nam.png" alt="">
+                        <h4>5 chai nước hoa thơm lâu mà nam giới không nên bỏ qua</h4>
+                        <p>Đâu là mùi nước hoa thơm lâu cho nam giới? Đây là câu hỏi mà hầu hết nam giới đều quan tâm...</p>
+                    </div>
+                    <div class="owl-item">
+                        <img src="../img/nuoc-hoa-huong-thom-da-thit-parfumerievn.jpg" alt="">
+                        <h4>Hương thơm da thịt, xu hướng mùi hương đang được yêu thích</h4>
+                        <p>Sở dĩ có tên mùi hương da thịt vì hương thơm của những chai nước hoa này có mùi vô cùng nhẹ nhàng...</p>
+                    </div>
+                    <div class="owl-item">
+                        <img src="../img/nuoc-hoa-nam-dior-sauvage-edt-parfumerievn.jpg" alt="">
+                        <h4>Để nắm bắt nữa kia, nàng thường chọn Dior sauvage EDT</h4>
+                        <p>Thấu hiểu và nắm bắt tâm lý phái mạnh, các nàng thường chọn Dior sauvage EDT như một món quà...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footer"></footer>
+    <script src="../js/banner.js"></script>
+    
+    <script src="../js/index.js" type="module"></script>
+    <script src="../js/rendersanpham.js" type="module"></script>
+    <script>
+        function showDetail(objSanPham){
+            localStorage.setItem("sanpham",objSanPham);
+        }
+        function searchFunction() {
+            const input = document.getElementById('searchInput');
+            const searchText = input.value.toLowerCase(); 
+          
+            // Lấy danh sách sản phẩm đã lưu trên localStorage
+            const products = JSON.parse(localStorage.getItem('dssanpham'));
+          
+            // Tìm kiếm sản phẩm theo từ khóa nhập vào
+            const filteredProducts = products.filter(function(product) {
+              return product.tenNuocHoa.toLowerCase().includes(searchText); // Kiểm tra tên sản phẩm có chứa từ khóa nhập vào không
+            });
+            
+            var HTML = chuyenDSObjectThanhHTML(filteredProducts);
+        
+        
+            var nodeDSSanPham =  document.getElementById('products');
+            nodeDSSanPham.innerHTML = HTML;
+
+          }
+          function chuyenDSObjectThanhHTML(dsSanPham) {
+            var HTMLDanhSachSanPham = `<div class="dssanpham">`;
+            for(var i=0;i<dsSanPham.length;i++){
+                var htmlSanPham = chuyenSanPhamThanhHTML(dsSanPham[i]);
+                HTMLDanhSachSanPham = HTMLDanhSachSanPham + htmlSanPham;
+            }
+        
+            HTMLDanhSachSanPham = HTMLDanhSachSanPham + `</div>`;
+            return HTMLDanhSachSanPham;
+        }
+        
+        function chuyenSanPhamThanhHTML(sanPham){
+            var html=``;
+            var SP = JSON.stringify(sanPham);
+            html += `<div class="item">
+                             <div class="item-thumb">
+                                <a href="/html/chitietsanpham.html" onclick=\'showDetail(\`${SP}\`);\' id="location"><img src=".${sanPham.anh[1]}" alt=""></a>
+                                </div>
+                                <h4 class="item-title">${sanPham.tenNuocHoa}</h4>
+                                <div class="item-price">${sanPham.gia[0]} đ - ${sanPham.gia[1]} đ</div>
+                                <div class="item-rate"><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>
+                                <div class="item-btn">
+                                    <button class="btn btn-heart"><i class="fa-regular fa-heart"></i></button>
+                                    <button class="btn btn-primary" onclick=\'showDetail(\`${SP}\`);\' ><i class="fa-sharp fa-regular fa-cart-plus"></i></button>
+                                </div>
+                            </div>`;
+        
+            return html;
+        }
+        
+    </script>
+    
+
+</body>
+</html>

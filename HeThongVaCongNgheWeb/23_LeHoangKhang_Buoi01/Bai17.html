@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 17. a)</title>
+    <style>
+        #main {
+            width: 600px;
+            box-shadow: 0 0 10px #000;
+            background-color: #ffd078;
+        }
+
+        h4 {
+            margin: 0 0;
+        }
+
+        br {
+            line-height: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h2 style="text-align: center;">Survey Form</h2>
+        <br>
+        <p>If you are interested in purchasing one or more of our products, before ordering please complete some or all
+            of the following survey for our marketing department. Answering any questions is optional, and all
+            information will be kept strictly confidential. Thank you very much for your timel</p>
+        <label for="name">1. What is your name?</label>
+        <br>
+        <input type="text" id="name" class="input">
+        <br>
+        <label for="name">2. What is your date of birth?</label>
+        <br>
+        <label for="month">Month: </label>
+        <select name="month" id="">
+            <option value="">January</option>
+        </select>
+        <label for="date">Date: </label>
+        <select name="date" id="">
+            <option value="">1</option>
+        </select>
+        <label for="Year">Year: </label>
+        <input type="text" id="year">
+
+        <br>
+        <label for="mailingAddress">3. What is your mailing address (if you would like to have a hard copy of our
+            catalog sent to you)?</label>
+        <br>
+        <textarea name="" id="mailingAddress" cols="30" rows="4"></textarea>
+        <br>
+
+        <label for="email">4. What is your rmail address?</label>
+        <br>
+        <input type="text" id="email">
+        <br>
+
+        <label for="">5. Have you viewed our online product catalog?</label>
+        <br>
+        <input type="radio"> Yes
+        <input type="radio"> No
+
+        <label for="">6. If so, what product(s), besides the one you are ordering, might you be interested in purchasing
+            in the future? (Check akk that apply)</label>
+        <br>
+        <input type="checkbox"> VCR
+        <br><input type="checkbox"> Big Screen TV
+        <br><input type="checkbox"> Audio Equipment
+        <br><input type="checkbox"> Video Equipment
+        <br><input type="checkbox"> Camera Equipment
+        <br>
+        Orther<input type="text" value="Please List"> 
+        <br>
+        <label for="">7. Do you have any questions, comments or suggestions before proceeding to the Order Form?</label>
+        <br>
+        <textarea name="" id="" cols="70" rows="7">Your Input: </textarea>
+
+
+    </div>
+</body>
+
+</html>

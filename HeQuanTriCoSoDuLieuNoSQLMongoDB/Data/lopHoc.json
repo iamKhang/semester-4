@@ -1,0 +1,9 @@
+{"_id":1,"maLop":"DHCK17","tenLop":"Đại học Cơ khí 17","chuongTrinhHoc":{"heDT":"DH","loaiDT":"CQ"},"khoaHoc":2021,"maNganh":"N010"}
+{"_id":2,"maLop":"DHCTM17","tenLop":"Đại học Chế tạo máy 17","chuongTrinhHoc":{"heDT":"DH","loaiDT":"CQ"},"khoaHoc":2021,"maNganh":"N020"}
+{"_id":3,"maLop":"DHTKTR17","tenLop":"Đại học Thiết kế thời trang 17","chuongTrinhHoc":{"heDT":"DH","loaiDT":"TT"},"khoaHoc":2021,"maNganh":"N040"}
+{"_id":4,"maLop":"DHKTPM17A","tenLop":"Đại học Kỹ thuật phần mềm 17A","chuongTrinhHoc":{"heDT":"DH","loaiDT":"CQ"},"khoaHoc":2021,"maNganh":"N060"}
+{"_id":5,"maLop":"DHKTPM17B","tenLop":"Đại học Kỹ thuật phần mềm 17B","chuongTrinhHoc":{"heDT":"DH","loaiDT":"CQ"},"khoaHoc":2021,"maNganh":"N060"}
+{"_id":6,"maLop":"DHKTPM17C","tenLop":"Đại học Kỹ thuật phần mềm 17C","chuongTrinhHoc":{"heDT":"DH","loaiDT":"TT"},"khoaHoc":2021,"maNganh":"N060"}
+{"_id":7,"maLop":"DHKHMT17A","tenLop":"Đại học Khoa học máy tính 17A","chuongTrinhHoc":{"heDT":"DH","loaiDT":"TT"},"khoaHoc":2021,"maNganh":"N070"}
+{"_id":8,"maLop":"DHKHMT17B","tenLop":"Đại học Khoa học máy tính 17B","chuongTrinhHoc":{"heDT":"DH","loaiDT":"CQ"},"khoaHoc":2021,"maNganh":"N070"}
+{"_id":9,"maLop":"DHHTTT17","tenLop":"Đại học Hệ thống thông tin 17","chuongTrinhHoc":{"heDT":"DH","loaiDT":"CQ"},"khoaHoc":2021,"maNganh":"N080"}

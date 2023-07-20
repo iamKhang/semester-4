@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calculator {
+            margin: auto;
+            margin-top: 50px;
+            width: 300px;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .display {
+            margin-bottom: 10px;
+        }
+
+        .display input[type="text"] {
+            width: 100%;
+            font-size: 30px;
+            padding: 10px;
+            border: none;
+            text-align: right;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px;
+            border: none;
+            background-color: #fff;
+            color: #000;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .operator {
+            background-color: #eee;
+        }
+
+        .clear {
+            color: #f00;
+        }
+
+        .equal {
+            background-color: #f00;
+            color: #fff
+        }
+
+        .wide {
+            grid-column: 2 / 4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="display" value="0" disabled>
+        </div>
+        <div class="buttons">
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button class="operator" onclick="append('/')">/</button>
+            <button onclick="append('4')">4</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button class="operator" onclick="append('*')">*</button>
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            <button class="operator" onclick="append('-')">-</button>
+            <button onclick="append('0')">0</button>
+            <button onclick="append('.')">.</button>
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button class="operator" onclick="append('+')">+</button>
+            <button class="equal wide" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script>
+        let display = document.getElementById("display");
+        let resultDisplayed = false;
+
+        function append(value) {
+            if (resultDisplayed) {
+                clearDisplay();
+            }
+
+            if (display.value === "0") {
+                display.value = value;
+            } else {
+                display.value += value;
+            }
+        }
+
+        function clearDisplay() {
+            display.value = "0";
+            resultDisplayed = false;
+        }
+
+        function backspace() {
+            display.value = display.value.slice(0, -1);
+        }
+
+        function calculate() {
+            let expression = display.value;
+
+            if (expression.indexOf("/") !== -1) {
+                let operands = expression.split("/");
+                let result = Number(operands[0]);
+
+                for (let i = 1; i < operands.length; i++) {
+                    result /= Number(operands[i]);
+                }
+
+                display.value = result.toString();
+            } else if (expression.indexOf("*") !== -1) {
+                let operands = expression.split("*");
+                let result = Number(operands[0]);
+
+                for (let i = 1; i < operands.length; i++) {
+                    result *= Number(operands[i]);
+                }
+
+                display.value = result.toString();
+            } else if (expression.indexOf("-") !== -1) {
+                let operands = expression.split("-");
+                let result = Number(operands[0]);
+
+                for (let i = 1; i < operands.length; i++) {
+                    result -= Number(operands[i]);
+                }
+
+                display.value = result.toString();
+            } else if (expression.indexOf("+") !== -1) {
+                let operands = expression.split("+");
+                let result = 0;
+
+                for (let i = 0; i < operands.length; i++) {
+                    result += Number(operands[i]);
+                }
+
+                display.value = result.toString();
+            }
+
+            resultDisplayed = true;
+        }
+    </script>
+</body>
+
+</html>

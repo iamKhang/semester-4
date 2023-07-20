@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="/css/index.css">
+
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="container">
+        <div class="items">
+            <div style="margin-top: 40px;" class="item-image row">
+                <div class="item-img col-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <img  src="" id="main-image"
+                                class="d-block mx-auto" />
+                        </div>
+                    </div>
+                    <div style="margin-top: 40px; padding: 0;" class="row">
+                        <div class="image-child row">
+                        </div>
+                        </div>
+                </div>
+            </div>
+            <div class="item-tt col-6">
+                    <!-- Thông tin -->
+                    <div class="row">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th>Tên sản phẩm</th>
+                                    <td id="item-name"></td>
+                                </tr>
+                                <tr>
+                                    <th>Đánh giá</th>
+                                    <td class="rating">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </td>
+                                <tr>
+                                    <th>Giá</th>
+                                    <td><span id="item-price"></span></td>
+                                </tr>
+                                <tr>
+                                    <th>Mô tả</th>
+                                    <td class="item-description"></td>
+                                </tr>
+                                <tr>
+                                    <th>Giới tính</th>
+                                    <td class="item-gender"></td>
+                                </tr>
+                                <tr>
+                                    <th>Xuất xứ</th>
+                                    <td class="item-xuatXu"></td>
+                                </tr>
+                                <tr>
+                                    <th>Dung tích</th>
+                                    <td>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="dungtich" id="dungtich1"
+                                                value="10ml" checked>
+                                            <label class="form-check-label" for="dungtich1">10ml</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="dungtich" id="dungtich2"
+                                                value="fullbox">
+                                            <label class="form-check-label" for="dungtich2">Fullbox</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Số lượng</th>
+                                    <td>
+                                        <div class="input-group mb-3">
+                                            <button style="margin-right: 20px;" class="btn btn-outline-secondary"
+                                                type="button" id="minus-btn"><i class="fas fa-minus"></i> </button>
+                                            <input style="margin-top: 2px;" type="number" class="" id="quantity" value="1"
+                                                min="1" max="1000">
+                                            <button class="btn btn-outline-secondary" type="button" id="plus-btn"><i
+                                                    class="fas fa-plus"></i> </button>
+                                        </div>
+                                        <div id="quantity-error" class="text-danger"></div>
+                                    </td>
+                                </tr>
+    
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="d-flex justify-content-center mt-4">
+                            <button class="btn btn-buy mx-2">Mua ngay</button>
+                            <button class="btn btn-cart mx-2" onclick=addToCart()>Thêm vào giỏ hàng <i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+    
+                    </div>
+                </div>
+
+        </div>
+        </div>
+        <div class="item-section row" style="margin-top: 150px;">
+            <div class="tab col-8">
+                <div class="">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="product-tab" data-toggle="tab" href="#product" role="tab"
+                                aria-controls="product" aria-selected="true">Thông tin sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="usage-tab" data-toggle="tab" href="#usage" role="tab"
+                                aria-controls="usage" aria-selected="false">Hướng dẫn sử dụng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="policy-tab" data-toggle="tab" href="#policy" role="tab"
+                                aria-controls="policy" aria-selected="false">Chính sách đổi trả</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab"
+                                aria-controls="review" aria-selected="false">Đánh giá</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="product" role="tabpanel"
+                            aria-labelledby="product-tab">
+                            <div class="moTa">
+                                <div style="font-family: Arial, sans-serif; font-size: 18px; color: #333;">
+                                    <h1 class="name" style="font-size: 24px; font-weight: bold; margin-bottom: 10px;"></h1>
+                                    
+                                    <strong>Nhà pha chế:</strong> <p style="margin-bottom: 10px;" class="nhaPhaChe"></p>
+                                    <strong>Nhóm hương:</strong><p style="margin-bottom: 10px;" class="nhomHuong"> </p>
+                                    <strong>Năm ra mắt:</strong><p style="margin-bottom: 10px;" class="namRaMat"> </p>
+                                    <strong>Độ lưu hương:</strong><p style="margin-bottom: 10px;" class="doLuuHuong"> </p>
+                                    <strong>Nồng độ:</strong><p style="margin-bottom: 10px;" class="nongDo"> </p>
+                                    <strong>Phong cách:</strong><p style="margin-bottom: 10px;" class="phongCach"> </p>
+                                    <p style="margin-bottom: 10px;" class="item-moTa"></p>
+                                </div>
+                            </div>
+                            <div id="tab-1" class="tab-content current">
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="usage" role="tabpanel" aria-labelledby="usage-tab">
+                            <h3>Hướng dẫn sử dụng</h3>
+                            <div id="tab-2" class="tab-content">
+                                Cách sử dụng nước hoa:
+                                <br>
+                                <br>
+                                1. Xịt nước hoa khi cơ thể sạch, khô, hoặc sau khi thoa dưỡng ẩm để giữ mùi lâu hơn.
+                                <br>
+                                <br>
+                                2. Giữ chai xịt cách cơ thể khoảng 12cm – 15cm và hướng đầu vòi xịt về mình. Nếu nước
+                                hoa
+                                làm
+                                ướt da thì nghĩa là bạn đang xịt ở khoảng cách quá gần. Chờ "điểm mạch" khô tự nhiên mà
+                                không
+                                chà xát (thói quen này làm bay mùi và biến mùi nước hoa).
+                                <br>
+                                <br>
+                                3. Xịt nước hoa vào các điểm mạch đập (cổ, ngực, các điểm mạch, cẳng tay hoặc khuỷu
+                                tay):
+                                đây là
+                                những vùng có mạch máu nằm gần bề mặt da. Các điểm này ấm hơn những nơi khác, hơi ấm
+                                giúp
+                                khuếch
+                                tán mùi hương tốt.
+                                <br>
+                                <br>
+                                - Nước hoa ban đêm thường được xịt lên cổ hoặc gần vùng cổ. Lý do là vì hương nước hoa
+                                ban
+                                đêm
+                                không lưu lại lâu.
+                                <br>
+                                <br>
+                                - Nước hoa ban ngày thường được xịt vào hông hoặc đầu gối. Đó là vì hương nước hoa ban
+                                ngày
+                                tỏa
+                                hương suốt ngày và thơm dai hơn. Bạn nên dùng thêm chút kem dưỡng ẩm gần chỗ định xức
+                                nước
+                                hoa
+                                để mùi hương lưu lại lâu hơn.
+                                <br>
+                                <br>
+                                4. Sử dụng nước hoa phù hợp theo mùa, thời tiết vì sức nóng và độ ẩm sẽ tăng mạnh mùi
+                                hương.
+                                <br>
+                                <br>
+                                5. Nước hoa có thể bám và tỏa mùi tốt hay không còn phụ thuộc vào cơ địa, thời gian,
+                                không
+                                gian
+                                sử dụng.
+                                <br>
+                                <br>
+                                Bảo quản nước hoa:
+                                <br>
+                                <br>
+                                Nước hoa không chỉ loãng và mất hương thơm theo thời gian, mà còn bị biến màu, biến chất
+                                dẫn
+                                đến
+                                mùi nước hoa có mùi khó chịu. Nếu bảo quản không đúng cách, nước hoa có thể bắt đầu hỏng
+                                sau
+                                vài
+                                tháng.
+                                <br>
+                                <br>
+                                1. Ánh sáng: tiếp xúc trực tiếp với ánh sáng trong một khoảng thời gian chắc chắn sẽ
+                                khiến
+                                nước
+                                hoa bị biến chất. Nên để nước hoa trong hộp, nơi tối, khô thoáng (tủ đồ, kệ tủ).
+                                <br>
+                                <br>
+                                2. Nhiệt độ: nhiệt độ dao động quá cao sẽ nhanh chóng làm hỏng mùi hương. Vì vậy để nước
+                                hoa
+                                trong nhà tắm có khả năng hư hỏng nhanh hơn nhiều so với nước hoa được lưu trữ trong
+                                không
+                                gian
+                                khác(tủ đồ, kệ tủ,...).
+                                <br>
+                                <br>
+                                Hạn sử dụng:
+                                <br>
+                                <br>
+                                Nước hoa thường không có hạn sử dụng. Ở một số Quốc gia, việc ghi chú hạn sử dụng là
+                                điều
+                                bắt
+                                buộc để hàng hóa được bán ra trên thị trường. Hầu hết nước hoa có hạn sử dụng 24 đến 36
+                                tháng,
+                                và tính từ ngày bạn mở sản phẩm hay phát xịt đầu tiên.
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="policy" role="tabpanel" aria-labelledby="policy-tab">
+                            <h3>Chính sách đổi trả</h3>
+                            <div id="tab-3" class="tab-content current">
+                                Parfumerie luôn mong muốn mang đến cho Quý Khách Hàng những trải nghiệm dịch vụ mua sắm
+                                tốt
+                                nhất. Chúng tôi phục vụ nhu cầu mua hàng trên toàn quốc với chính sách đổi trả cụ thể
+                                như
+                                sau:
+                                <br>
+                                <br>
+                                1. Thời hạn đổi trả trong vòng 03 ngày kể từ khi Quý Khách Hàng nhận sản phẩm của
+                                Parfumerie tại Cửa hàng hoặc từ Đơn vị giao hàng.
+                                <br>
+                                <br>
+                                2. Chỉ áp dụng đổi trả cho sản phẩm nước hoa Fullbox, không áp dụng cho Nước hoa chiết.
+                                <br>
+                                <br>
+                                3. Việc đổi trả hàng chỉ áp dụng với những sản phẩm bị lỗi kỹ thuật do nhà sản xuất.
+                                <br>
+                                - Quý Khách Hàng vui lòng thông báo ngay khi kiểm tra hàng lúc nhận và
+                                cần lập biên bản xác nhận giữa người mua và nhân viên giao hàng trong
+                                trường
+                                hợp
+                                sản phẩm nước hoa bị đổ, vỡ, rò rỉ hoặc các lỗi vật lý khác bên ngoài.
+                                <br>
+                                - Quý Khách Hàng vui lòng cung cấp hình ảnh video thấy rõ lỗi kỹ thuật của sản
+                                phẩm
+                                gửi
+                                cho Parfumerie để xác minh ngay khi khui hộp sản phẩm.
+                                <br>
+                                <br>
+                                4. Sản phẩm mua rồi, Quý khách hàng vui lòng không trả hàng nếu không phải lỗi của
+                                sản
+                                phẩm.
+                                <br>
+                                <br>
+                                5. Bảo hành: Nước hoa là sản phẩm đặc thù nên không áp dụng chính sách bảo
+                                hành.
+                                <br>
+                                <br>
+                                6. Các trường hợp từ chối đổi trả - bảo hành:
+                                <br>
+                                - Quá thời hạn quy định.
+                                Không phải lỗi của sản phẩm.
+                                <br>
+                                - Không xác minh được do Parfumerie cung cấp.
+                                Không có tem bảo hành của Parfumerie hoặc tem bảo hành bị rách/vỡ không còn nguyên vẹn.
+                                <br>
+                                - Sản phẩm không còn nguyên vẹn, bị biến dạng hoặc hư hỏng nặng.
+                                <br>
+                                - Các sản phẩm giảm giá từ 30% trở lên.
+                                <br>
+                                <br>
+                                Trân trọng cảm ơn!
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+                            <h3>Đánh giá</h3>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 37px;" class="col-4">
+                <div class="row border">
+                    <div class="col-3 d-flex align-items-center">
+                        <img style="width: 100%;" src="../img/chiTietSanPham/vanChuyen.webp" alt="">
+                    </div>
+                    <div class="col-9">
+                        <p>Giao hàng nhanh chóng</p>
+                        <span>✅ Giao hàng tận nơi toàn quốc; giao nhanh trong vòng 24h khu vực nội
+                            thành HCM.
+                            <br>
+                            ✅ Miễn phí giao hàng đối với đơn hàng sản phẩm nước hoa Fullbox.</span>
+                    </div>
+                </div>
+                <div class="row border">
+                    <div class="col-3 d-flex align-items-center ">
+                        <img style="width: 80%;" src="../img/chiTietSanPham/danhGia.webp" alt="">
+                    </div>
+                    <div class="col-9">
+                        <p>Bảo đảm chất lượng</p>
+                        <span>✅ Cam kết nước hoa chính hãng 100%.
+                            <br>
+                            ✅ Nói không với các sản phẩm nước hoa kém chất lượng; nước hoa Auth 1:1
+                            và các thể loại tương tự khác.</span>
+                    </div>
+                </div>
+                <div class="row border">
+                    <div class="col-3 d-flex align-items-center">
+                        <img style="width: 100%;" src="../img/chiTietSanPham/chamSocKhachHang.webp" alt="">
+                    </div>
+                    <div class="col-9">
+                        <p>Giao hàng nhanh chóng</p>
+                        <span>✅ Giao hàng tận nơi toàn quốc; giao nhanh trong vòng 24h khu vực nội
+                            thành HCM.
+                            <br>
+                            ✅ Miễn phí giao hàng đối với đơn hàng sản phẩm nước hoa Fullbox.</span>
+                    </div>
+                </div>
+                <div class="row border">
+                    <div class="col-3 d-flex align-items-center ">
+                        <img style="width: 100%;" src="../img/chiTietSanPham/daDangLuaChon.webp" alt="">
+                    </div>
+                    <div class="col-9">
+                        <p>Chăm sóc khách hàng tốt</p>
+                        <span>✅ Hotline 24/7: <a href="tel:0325421880">0325421880</a>
+                            <br>
+                            ✅ Chăm sóc khách hàng tận tình trước và sau khi mua hàng.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+    <footer id="footer"></footer>
+    <script src="/js/index.js" type="module"></script>
+    <script src="/js/chiTietSanPham.js"></script>
+  
+    
+</body>
+
+</html>

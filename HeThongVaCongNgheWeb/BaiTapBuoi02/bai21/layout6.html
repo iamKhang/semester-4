@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 6</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(226, 197, 117);
+    }
+
+    header,
+    footer {
+      height: 50px;
+      border-bottom: 1px solid black;
+    }
+
+    nav {
+      height: 25px;
+      border-bottom: 1px solid black;
+    }
+
+    div {
+      display: flex;
+      height: calc(100vh - 125px);
+      border-bottom: 1px solid black;
+    }
+
+    section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-right: 1px solid black;
+    }
+
+    article {
+      height: 95%;
+      width: 95%;
+      border: 1px solid black;
+      background-color: pink;
+    }
+
+    article:nth-child(even) {
+      background-color: antiquewhite;
+    }
+
+    article:nth-child(odd) {
+      background: pink;
+    }
+
+    aside {
+      width: 400px;
+    }
+
+    footer {
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>header</header>
+  <nav>nav</nav>
+  <div>
+    <section>section
+      <article>
+        article
+      </article>
+      <article>
+        article
+      </article>
+    </section>
+    <aside>
+      aside
+    </aside>
+  </div>
+  <footer>footer</footer>
+</body>
+
+</html>

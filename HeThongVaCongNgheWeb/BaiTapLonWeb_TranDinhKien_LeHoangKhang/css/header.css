@@ -1,0 +1,189 @@
+
+.header{
+    display: flex;
+    flex-direction: column;
+    height: 190px;
+
+}
+.search{
+    width: 340px;
+    align-items: center;
+    display: flex;
+}
+.search input{
+    margin: 0;
+    border-radius: 5px 0px 0px 5px;
+    padding-left: 8px;
+    
+}
+.search button{
+    cursor: pointer;
+    border: 0px;
+    width: 80px;
+    height: 50px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: white;
+}
+.banner{
+    height:90%;
+    width: 100%;
+    background-color: rgb(34,80,62);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.banner a{
+    color: white;
+    
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header_navbar_col_search{
+    position: relative;
+}
+
+.header_navbar_col_search input{
+    width: 300px;
+    height: 50px;
+    border: 0px;
+    outline: none;
+}
+
+.header_navbar_logo{
+    width: 370px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+
+}
+.header_navbar_logo img{
+    width: 350px;
+    height: 100px;
+}
+.header_navbar_login{
+    width: 240px;
+    border-right: 1px solid white;
+}
+.header_navbar_hidden{
+    display: flex;
+    justify-content: space-around;
+    width: 350px;
+}
+.header_navbar_loginbutton p,
+.header_navbar_loginbutton small,
+.header_navbar_login a{
+    font-size: 20px;
+    color:white; 
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header_navbar_hidden a:hover{
+    color: rgba(255, 255, 255, 0.7);
+
+}
+.header_navbar_cart{
+    position: relative;
+}
+.header_navbar_cart:hover .subcart{
+    display: block;
+}
+.header_navbar_cart .subcart{
+    position: absolute;
+    background-color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 1px 1px 1px rgba(76, 75, 75, 0.6) ;
+    width: 600px;
+    right: 0;
+    border-radius: 5px;
+    display: none;
+    animation: subnav ease 0.4s forwards;
+    padding:5px;
+    z-index: 100;
+}
+
+.header_nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    background-color:whitesmoke ;
+    margin-left: 10px;
+}
+.navbar{
+    width: 70%;
+    height: 100%;
+}
+.navbar li{
+    list-style: none;
+    font-size: 20px;
+
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+    font-family:Petrona, sans-serif;
+    transition: all 0.1s ease;
+}
+.navbar a:hover{
+    font-size: larger;
+    color: rgba(0, 0, 0, 0.6);
+    
+}
+
+.navitem {
+    position: relative;
+}
+.navitem:hover .subnav{
+    display: grid;
+}
+
+.subnav{
+    border-radius: 0px 8px 8px 8px;
+    border: 0px;
+    position: absolute;
+    gap: 20px;
+    width: 960px;
+    display: none;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: whitesmoke;
+    animation: subnav ease 0.4s forwards;
+
+}
+.subnav > div { 
+    margin: 0px;
+    padding: 25px;
+}
+
+#nuochoa{
+    width: 250px;
+    grid-template-columns: 100%;
+    justify-content: space-around;
+}
+
+.navitem::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    width: 200px;
+    height: 40px;
+}
+@keyframes subnav{
+    from {
+        top:20px;
+        opacity:0;
+    } 
+    to {
+        top:50px;
+    }
+}
+
+
+@font-face {
+    font-family: 'Petrona'; 
+    src: url('/fonts/Petrona-VariableFont_wght.ttf'); 
+}
+  
+
+  
+

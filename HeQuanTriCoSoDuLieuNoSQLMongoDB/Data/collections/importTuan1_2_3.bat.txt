@@ -1,0 +1,4 @@
+mongorestore --drop -d collections -c lophoc T:\HeQuanTriCoSoDuLieuNoSQLMongoDB\Data\collections\dsLophoc.bson
+mongoimport --drop -d collections -c restaurants T:\HeQuanTriCoSoDuLieuNoSQLMongoDB\Data\collections\restaurants.json
+mongorestore --drop -d collections -c sinhvien T:\HeQuanTriCoSoDuLieuNoSQLMongoDB\Data\collections\dsSinhvien.bson
+mongoimport --drop -d collections -c xe T:\HeQuanTriCoSoDuLieuNoSQLMongoDB\Data\collections\xe.json

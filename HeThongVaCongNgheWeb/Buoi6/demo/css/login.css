@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Roboto, Arial, sans-serif;
+    background: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+  
+  .login {
+    width: 400px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: white;
+    padding: 20px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  
+  .login-triangle {
+    width: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border: 12px solid transparent;
+    border-bottom-color: #3498db;
+  }
+  
+  .login-header {
+    margin: -35px 0 20px 0;
+    font-size: 34px;
+    font-weight: 500;
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  .login-container {
+    max-width: 300px;
+    margin: auto;
+  }
+  
+  .login-container p {
+    margin-top: 10px;
+  }
+  
+  input[type=email], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  input[type=email]:focus, input[type=password]:focus {
+    outline: none;
+    border-bottom: 2px solid #3498db;
+  }
+  
+  input[type=submit] {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #2980b9;
+  }
+  
+  a {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .login-social-link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #333333;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: background-color 0.2s;
+  }
+  
+  .login-social-link:hover {
+    background-color: #eeeeee;
+    color: #333333;
+  }
+  
+  .fab {
+    font-size: 20px;
+  }
+  
+  .login-social-link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    background-color: #333333;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: background-color 0.2s;
+  }
+  
+  .login-social-link.facebook {
+    background-color: #3b5998;
+  }
+  
+  .login-social-link.google {
+    background-color: #dd4b39;
+  }
+  
+  .login-social-link.twitter {
+    background-color: #1da1f2;
+  }
+  
+  .login-social-link:hover {
+    background-color: #eeeeee;
+    color: #333333;
+  }
+  
+  .fab {
+    font-size: 20px;
+  }
+  
+  /* Thêm mã để căn giữa các biểu tượng đăng nhập xã hội */
+  .login-container {
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .login-container p.social-icons {
+    margin-top: 25px;
+  }
+  

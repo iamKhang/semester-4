@@ -1,0 +1,22 @@
+db.inventory.insertMany([
+{ _id: 1, item: { name: "ab", code: "123" }, qty: 15, tags: [ "A", "B", "C" ] },
+{ _id: 2, item: { name: "cd", code: "123" }, qty: 20, tags: [ "B" ] },
+{ _id: 3, item: { name: "ij", code: "456" }, qty: 25, tags: [ "A", "B" ] },
+{ _id: 4, item: { name: "xy", code: "456" }, qty: 30, tags: [ "B", "A" ] },
+{ _id: 5, item: { name: "mn", code: "000" }, qty: 20, tags: [ [ "A", "B" ], "C" ] },
+])
+
+db.inventory.insertMany([
+{ _id: 1, item: { name: "ab", code: "123" }, qty: 15, tags: [ "A", "B", "C" ] },
+{ _id: 2, item: { name: "cd", code: "123" }, qty: 20, tags: [ "B" ] },
+{ _id: 3, item: { name: "ij", code: "456" }, qty: 25, tags: [ "A", "B" ] },
+{ _id: 4, item: { name: "xy", code: "456" }, qty: 30, tags: [ "B", "A" ] },
+{ _id: 5, item: { name: "mn", code: "000" }, qty: 20, tags: [ [ "A", "B" ], "C" ] },
+{ _id: 6, sku: "abc123", description: "Single line description.", item: { name: "Apple", code: "123" }, qty: 15, price: 1.99, tags: [ "A", "B", "C" ] },
+{ _id: 7, sku: "abc789", description: "First line\nSecond line", item: { name: "Carrot", code: "456" }, qty: 20, price: 3.02, tags: [ "B" ] },
+{ _id: 8, sku: "xyz456", description: "First line Second line", item: { name: "Orange", code: "789" }, qty: 25, price: 0.75, tags: [ "A", "B" ] },
+{ _id: 9, sku: "xyz789", description: "Many spaces before     line", item: { name: "Avocado", code: "101" }, qty: 90, price: 2.00, tags: [ "B", "A" ] },
+{ _id: 10, sku: "xyz701", description: "Multiple\nline description", item: { name: "chilli", code: "112" }, qty: 77, price: 2.05, tags: [ [ "A", "B" ], "C" ] },
+{ _id: 11, sku: "xyz501", description: "Multiple\nline description 2", item: { name: "grapefruit", code: "122" }, qty: 150, price: 2.00, tags: [ "A", "E" ] },
+{ _id: 12, sku: "xyz501", description: "First line Second line", item: { name: "Citrus", code: "124" }, qty: 2}
+])

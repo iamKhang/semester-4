@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #stopwatch {
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #display {
+            font-size: 3em;
+            font-weight: bold;
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        #controls button {
+            font-size: 1.2em;
+            padding: 5px 10px;
+            margin: 10px;
+        }
+
+
+        .stopwatch {
+            font-size: 4rem;
+
+        }
+
+        button {
+            background-color: #fff;
+            color: #0e4d92;
+            font-size: 1.5rem;
+            border: none;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+
+        #start {
+            background-color: #28a745;
+        }
+
+        #stop {
+            background-color: #ffc107;
+        }
+
+        #reset {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="stopwatch">
+        <h2>Stopwatch</h2>
+        <div id="display">
+            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>.<span
+                id="milliseconds">000</span>
+        </div>
+        <div id="controls">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        let timerId;
+        let startTime;
+        let elapsedTime = 0;
+        let stopwatch = document.getElementById('display');
+
+        function padTime(time, length) {
+            return (time + '').padStart(length, '0');
+        }
+
+        function update() {
+            let now = Date.now();
+            elapsedTime = now - startTime;
+
+            let hours = Math.floor(elapsedTime / (60 * 60 * 1000));
+            let minutes = Math.floor((elapsedTime - hours * 60 * 60 * 1000) / (60 * 1000));
+            let seconds = Math.floor((elapsedTime - hours * 60 * 60 * 1000 - minutes * 60 * 1000) / 1000);
+            let milliseconds = elapsedTime % 1000;
+
+            document.getElementById('hours').textContent = padTime(hours, 2);
+            document.getElementById('minutes').textContent = padTime(minutes, 2);
+            document.getElementById('seconds').textContent = padTime(seconds, 2);
+            document.getElementById('milliseconds').textContent = padTime(milliseconds, 3);
+        }
+
+        function start() {
+            startTime = Date.now() - elapsedTime;
+            timerId = setInterval(update, 10);
+        }
+
+        function stop() {
+            clearInterval(timerId);
+        }
+
+        function reset() {
+            clearInterval(timerId);
+            elapsedTime = 0;
+            update();
+        }
+
+        document.getElementById('start').addEventListener('click', start);
+        document.getElementById('stop').addEventListener('click', stop);
+        document.getElementById('reset').addEventListener('click', reset);
+
+    </script>
+</body>
+
+</html>

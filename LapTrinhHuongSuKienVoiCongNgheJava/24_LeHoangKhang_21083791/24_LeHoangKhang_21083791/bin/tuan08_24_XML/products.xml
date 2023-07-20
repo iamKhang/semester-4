@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<productList>
+                    	
+    
+    
+    
+    
+    <product id="TV1025">
+                                        		
+        
+        
+        
+        
+        <productName>TV Led</productName>
+                                        		
+        
+        
+        
+        
+        <manufacture>Sony</manufacture>
+                                        		
+        
+        
+        
+        
+        <description>TV led voi cong nghe</description>
+                                        		
+        
+        
+        
+        
+        <suplier>
+                                                            			
+            
+            
+            
+            
+            <suplierName>Thiên Hòa</suplierName>
+                                                            			
+            
+            
+            
+            
+            <country>Việt Nam</country>
+                                                            			
+            
+            
+            
+            
+            <website>www.thienhoa.com</website>
+                                                            		
+        
+        
+        
+        
+        </suplier>
+                                        		
+        
+        
+        
+        
+        <price>500.0</price>
+                                        	
+    
+    
+    
+    
+    </product>
+                    	
+    
+    
+    
+    
+    <product id="Phone1002">
+                                        		
+        
+        
+        
+        
+        <productName>DT NOKIA lumia 630</productName>
+                                        		
+        
+        
+        
+        
+        <manufacture>nokia</manufacture>
+                                        		
+        
+        
+        
+        
+        <description>Điện thoại cảm ứng</description>
+                                        		
+        
+        
+        
+        
+        <suplier>
+                                                            			
+            
+            
+            
+            
+            <suplierName>FBT</suplierName>
+                                                            			
+            
+            
+            
+            
+            <country>Việt Nam</country>
+                                                            			
+            
+            
+            
+            
+            <website>www.fbt.com</website>
+                                                            		
+        
+        
+        
+        
+        </suplier>
+                                        		
+        
+        
+        
+        
+        <price>800.0</price>
+                                        	
+    
+    
+    
+    
+    </product>
+                    	
+    
+    
+    
+    
+    <product id="IPhone5S">
+                                        		
+        
+        
+        
+        
+        <productName>Điện thoại IPhne 5S</productName>
+                                        		
+        
+        
+        
+        
+        <manufacture>Apple</manufacture>
+                                        		
+        
+        
+        
+        
+        <description>Điện thoại cảm ứng</description>
+                                        		
+        
+        
+        
+        
+        <suplier>
+                                                            			
+            
+            
+            
+            
+            <suplierName>Thế giới di động</suplierName>
+                                                            			
+            
+            
+            
+            
+            <country>Việt Nam</country>
+                                                            			
+            
+            
+            
+            
+            <website>www.diDong.com</website>
+                                                            		
+        
+        
+        
+        
+        </suplier>
+                                        		
+        
+        
+        
+        
+        <price>1200.0</price>
+                                        	
+    
+    
+    
+    
+    </product>
+                    
+    
+    
+    
+    
+    <product id="12">
+                                        
+        
+        
+        
+        <productName>Khang</productName>
+                                        
+        
+        
+        
+        <manufacture>khàng</manufacture>
+                                        
+        
+        
+        
+        <description>fgfdgdgfd</description>
+                                        
+        
+        
+        
+        <suplier>
+                                                            
+            
+            
+            
+            <suplierName>dfg</suplierName>
+                                                            
+            
+            
+            
+            <country>gfđgdg</country>
+                                                            
+            
+            
+            
+            <website>gfdgddg</website>
+                                                        
+        
+        
+        
+        </suplier>
+                                        
+        
+        
+        
+        <price>30.0</price>
+                                    
+    
+    
+    
+    </product>
+                
+
+    
+    
+    <product id="122">
+                        
+        
+        <productName>sdf</productName>
+                        
+        
+        <manufacture>sdầ</manufacture>
+                        
+        
+        <description>fsdà</description>
+                        
+        
+        <suplier>
+                                    
+            
+            <suplierName>sadfá</suplierName>
+                                    
+            
+            <country>fdsầ</country>
+                                    
+            
+            <website>sdàá</website>
+                                
+        
+        </suplier>
+                        
+        
+        <price>23.0</price>
+                    
+    
+    </product>
+        
+
+</productList>

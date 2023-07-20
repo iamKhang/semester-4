@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form đăng kí</title>
+    <style>
+        #khung{
+            width: 400px;
+            border-style: solid;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        #ho{
+            width: 150px;
+        }
+
+        #ten{
+            min-width: 150px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="khung">
+        <h1>
+            Đăng kí
+        </h1>
+        <input type="text" id="ho" value="Họ">
+        <input type="text" id="ten" value="Tên">
+        <br>
+        <input type="email" id="email" value="Email hay số điện thoại đi động">
+        <br>
+        <input type="email" id="nhapLaiEmail" value="Nhập lại email hay số điện thoại di động">
+        <br>
+        <input type="password" id="pass" value="Mật khẩu mới">
+        <br>
+        Ngày sinh
+        <br>
+        <input type="number" id="ngay" name="ngay" min="1" max="30">
+        <input type="month" id="month">
+        <br>
+        <input type="checkbox" id="nam" name="gioiTinh" value="Nam">
+        <label for="gioiTinh"> Nam</label><br>
+        <input type="checkbox" id="nu" name="gioiTinh" value="Nu">
+        <label for="gioiTinh"> Nữ</label><br>
+        <input type="submit" value="Đăng ký">
+
+
+
+    </div>
+</body>
+
+</html>

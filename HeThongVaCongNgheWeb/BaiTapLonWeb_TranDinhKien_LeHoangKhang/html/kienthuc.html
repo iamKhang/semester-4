@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kiến thức</title>
+	<link rel="stylesheet" href="../css/index.css">
+	<style>
+		.col-3 {
+			width: 25%;
+			float: left;
+		}
+
+		.menu {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.menu li {
+			padding: 10px 0;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.menu li:last-child {
+			border-bottom: none;
+		}
+
+		.menu li a {
+			display: block;
+			font-weight: bold;
+			text-decoration: none;
+			color: #333;
+		}
+
+		.menu select {
+			margin-left: 10px;
+		}
+
+		.dropdown-menu {
+			display: none;
+		}
+
+		.dropdown-menu.show {
+			display: block;
+			margin-top: 135px;
+			margin-left: 47px;
+		}
+
+		.menu li:hover {
+			color: black;
+
+		}
+
+		.row li:hover a {
+			color: green;
+		}
+
+		.pagination .page-link {
+			color: black;
+			/* background-color: #007bff;
+			border-color: #007bff; */
+			font-weight: bold;
+			font-size: 16px;
+		}
+
+		.pagination .page-item:first-child .page-link {
+			margin-left: 0;
+			border-top-left-radius: 0.25rem;
+			border-bottom-left-radius: 0.25rem;
+		}
+
+		.pagination .page-item:last-child .page-link {
+			border-top-right-radius: 0.25rem;
+			border-bottom-right-radius: 0.25rem;
+		}
+
+		.pagination .page-item.active .page-link {
+			background-color: #17a2b8;
+			border-color: #17a2b8;
+		}
+		.container{
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<header id="header"></header>
+	<div class="container">
+		<div class="row">
+			<div class="col-2">
+				<ul class="menu d-flex flex-column">
+					<li><a href="#">Trang chủ</a></li>
+					<li><a href="#">Giới thiệu</a></li>
+					<li class="d-flex justify-content-between align-items-center dropdown-toggle">
+						<a href="#">Thương hiệu</a>
+					</li>
+					
+					<li class="d-flex justify-content-between align-items-center dropdown-toggle">
+						<a href="#">Nước hoa</a>
+					</li>
+
+					<li>
+						<a href="#">Nước hoa chiết</a>
+					</li>
+					<li><a href="#">Kiến thức</a></li>
+					<li><a href="#">Liên hệ</a></li>
+				</ul>
+			</div>
+			<div class="col-10">
+				<div class="row">
+					<h1>Thông tin:</h1>
+				</div>
+				<div class="row mt-3">
+					<div class="col-3"><img style="width: 100%;" src="../img/kienThuc/1.webp" alt=""></div>
+					<div class="col-9">
+						<div class="row">
+							<h3>
+								[Giải đáp] Địa chỉ mua nước hoa uy tín, chất lượng ở đâu?
+							</h3>
+						</div>
+						<div class="row">
+							<span>23/4/2023</span>
+						</div>
+						<div class="row">
+							<span>Chọn địa chỉ mua nước hoa uy tín được khá nhiều khách hàng quan tâm và thắc mắc. Bởi
+								vì chúng ta đều biết rằng nước hoa là “chân ái” của nhiều người. Nhưng lại có rất nhiều
+								các địa chỉ cung cấp nước hoa không đảm bảo hàng chính hãng, chất lượng. Hay nói cụ thể
+								hơn đó...</span>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-3"><img style="width: 100%;" src="../img/kienThuc/2.webp" alt=""></div>
+					<div class="col-9">
+						<div class="row">
+							<h3>
+								Những mùi nước hoa được ưa chuộng nhất dành cho nam và nữ
+							</h3>
+						</div>
+						<div class="row">
+							<span>23/4/2023</span>
+						</div>
+						<div class="row">
+							<span>Chọn địa chỉ mua nước hoa uy tín được khá nhiều khách hàng quan tâm và thắc mắc. Bởi
+								vì chúng ta đều biết rằng nước hoa là “chân ái” của nhiều người. Nhưng lại có rất nhiều
+								các địa chỉ cung cấp nước hoa không đảm bảo hàng chính hãng, chất lượng. Hay nói cụ thể
+								hơn đó...</span>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-3"><img style="width: 100%;" src="../img/kienThuc/3.webp" alt=""></div>
+					<div class="col-9">
+						<div class="row">
+							<h3>
+								Lựa chọn mẫu nước hoa mùi nhẹ nhàng cho nữ
+							</h3>
+						</div>
+						<div class="row">
+							<span>23/4/2023</span>
+						</div>
+						<div class="row">
+							<span>Top những mùi nước hoa được ưa chuộng nhất dành cho cả nam và nữ được Parfumerie.vn
+								chia sẻ đầy đủ. Chắc chắn rằng là một tín đồ của nước hoa bạn không thể nào bỏ qua những
+								chọn lựa này. Mỗi lần ra ngoài, bản thân không chỉ đẹp, ấn tượng với phong cách thời
+								trang. Mà...</span>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-3"><img style="width: 100%;" src="../img/kienThuc/4.webp" alt=""></div>
+					<div class="col-9">
+						<div class="row">
+							<h3>
+								Nước hoa authentic là gì? [Giải đáp thông tin nước hoa]
+							</h3>
+						</div>
+						<div class="row">
+							<span>23/4/2023</span>
+						</div>
+						<div class="row">
+							<span>Nước hoa nữ thơm lâu nhất là loại nào chắc hẳn không phải là thắc mắc của riêng ai.
+								Bởi vì cùng với việc chọn lựa mùi hương nước hoa phù hợp. Thì độ giữ mùi lâu của nước
+								hoa cũng chính là điều quan trọng mà các cô nàng quan tâm. Cùng Parfumerie.vn tìm hiểu
+								một số thô...</span>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-3"><img style="width: 100%;" src="../img/kienThuc/5.webp" alt=""></div>
+					<div class="col-9">
+						<div class="row">
+							<h3>
+								Top 05 mùi nước hoa nữ thơm lâu nhất dành cho nàng
+							</h3>
+						</div>
+						<div class="row">
+							<span>23/4/2023</span>
+						</div>
+						<div class="row">
+							<span>Nước hoa nữ thơm lâu nhất là loại nào chắc hẳn không phải là thắc mắc của riêng ai.
+								Bởi vì cùng với việc chọn lựa mùi hương nước hoa phù hợp. Thì độ giữ mùi lâu của nước
+								hoa cũng chính là điều quan trọng mà các cô nàng quan tâm. Cùng Parfumerie.vn tìm hiểu
+								một số thô...</span>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<footer id="footer"></footer>
+	<script src="../js/index.js" type="module"></script>
+	<script>
+		const dropdownToggle = document.querySelector('.dropdown-toggle');
+		const dropdownMenu = document.querySelector('.dropdown-menu');
+
+		dropdownToggle.addEventListener('click', function () {
+			dropdownMenu.classList.toggle('show');
+		});
+
+	</script>
+</body>
+
+</html>

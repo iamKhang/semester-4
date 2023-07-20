@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Thanh Cảnh 21086671</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <style>
+        p {
+            margin: 0;
+        }
+        
+        #e1 {
+            position: relative;
+        }
+        
+        #menucon {
+            position: absolute;
+            display: none;
+            background-color: white;
+            padding: 8px;
+            z-index: 1000;
+            min-width: 150px;
+        }
+        
+        .nav-item:hover {
+            background-color: rgb(241, 240, 244);
+        }
+        
+        #e1:hover #menucon {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="row" style="background-color: #f8f8f8;">
+                <div class="col-12 row">
+                    <div class="col-3">
+                        <img src="../img/logo.PNG" alt="">
+                    </div>
+                    <div class="col-9 text-center pt-3">
+                        <h4>ĐOÀN THANH NIÊN THÀNH PHỐ HỒ CHÍ MINH</h1>
+                            <H5 class="text-danger">ĐOÀN THANH NIÊN TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP THÀNH PHỐ HỒ CHÍ MINH</H2>
+                    </div>
+                </div>
+            </nav>
+            <div class="row" style="background-color: rgb(214, 238, 250);">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">ĐOÀN THỂ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">SỰ KIỆN</a>
+                    </li>
+                    <li class="nav-item" id="e1">
+                        <a href="#" class="nav-link">
+                            HOẠT ĐỘNG
+                        </a>
+                        <div id="menucon" class=" flex-column shadow">
+                            <a href="#" data-toggle="modal" data-target="#inputModal">Đăng ký</a>
+                            <a href="#">Tham gia</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img src="../img/ngayhoithanhnien.JPG" alt="" class="rounded-circle">
+                </div>
+                <div class="col-5 ml-auto">
+                    <h4 class="text-warning">TIN NỔI BẬT</h4>
+                    <ol type="I" class="" style="background-color: rgb(214, 238, 250);">
+                        <li class="text-primary"><a href="#">Mùa hè xanh</a></li>
+                        <li class="text-primary"><a href="#">Thanh niên tình nguyện</a></li>
+                        <li class="text-primary"><a href="#">Tấm lòng vàng</a></li>
+                        <li class="text-primary"><a href="#">Hiến máu nhân đạo</a></li>
+                        <li class="text-primary"><a href="#">Bảo vệ môi trường sạch</a></li>
+                        <li class="text-primary"><a href="#">Thi đua lập thành tích chào mừng 26/3</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row ">
+                <h4 class="text-center w-100 text-warning my-2">DANH SÁCH ĐĂNG KÝ HOẠT ĐỘNG MÙA HÈ XANH</h4>
+                <table class="table table-striped ">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã SV</th>
+                            <th>Tên SV</th>
+                            <th>Ngày tham gia</th>
+                            <th>Email</th>
+                            <th>Số điện thoại</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-right text-white ">
+        <div class="container py-2 " style="background-color: rgb(6, 129, 181); "><span>@ 2020-2021 Đoàn thanh niên - Trường đại học Công Nghiệp TP.Hồ Chí Minh</span> </div>
+    </footer>
+
+    <div class="modal fade" id="inputModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="text-danger text-center">THÔNG TIN ĐĂNG KÝ</h1>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-12"><label for="">Mã sinh viên</label></div>
+                                <div class="col-12"><input type="text" class="form-control" name="" id="txtMa" placeholder="Mã sinh viên"></div>
+                                <div class="col-12">
+                                    <p class="text-danger" id="errMa">*</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-12"><label for="">Họ tên</label></div>
+                                <div class="col-12"><input type="text" class="form-control" name="" id="txtTen" placeholder="Họ tên"></div>
+                                <div class="col-12">
+                                    <p class="text-danger" id="errTen">*</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-12"><label for="">Ngày tham gia</label></div>
+                                <div class="col-12"><input type="date" class="form-control" name="" id="txtNgay"></div>
+                                <div class="col-12">
+                                    <p class="text-danger" id="errNgay">*</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-12"><label for="">Email</label></div>
+                                <div class="col-12"><input type="email" class="form-control" name="" id="txtEmail" placeholder="Địa chỉ email"></div>
+                                <div class="col-12">
+                                    <p class="text-danger" id="errEmail">*</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-12"><label for="">Số điện thoại</label></div>
+                                <div class="col-12"><input type="text" class="form-control" name="" id="txtSDT" placeholder="Số điện thoại"></div>
+                                <div class="col-12">
+                                    <p class="text-danger" id="errSDT">*</p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-danger w-100 p-2" id="btn-save">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(() => {
+            function validate(regex, inputID, errID, msg) {
+                if (regex.test($(inputID).val())) {
+                    $(errID).html('*');
+                    return true;
+                } else {
+                    $(errID).html(msg);
+                    return false;
+                }
+            }
+
+            function validateMSSV() {
+                return validate(/^\d{10}$/, "#txtMa", "#errMa", "MSSV không được rỗng và phải là 10 chữ số");
+            }
+
+            function validateTen() {
+                return validate(/^([A-Z][^!@#$%^&*()\dA-Z\s]+)(\s[A-Z][^!@#$%^&*()\dA-Z\s]+)*$/, "#txtTen", "#errTen", "Tên không được rỗng và chỉ dùng chữ hoa đầu từ");
+            }
+
+            function validateEmail() {
+                return validate(/^[a-zA-Z]\w{5}@iuh.edu.vn$/, "#txtEmail", "#errEmail", "Email không được rỗng và phải bắt đầu bằng chữ và có dạng xxxxxx@iuh.edu.vn");
+            }
+
+            function validateSDT() {
+                return validate(/^\d{10}$/, "#txtSDT", "#errSDT", "Số điện thoại không đưuọc rỗng và phải là 10 chữ số");
+            }
+
+            function validateNgay() {
+                const inputNgay = new Date($("#txtNgay").val());
+
+                if (inputNgay == 'Invalid Date') {
+                    $("#errNgay").html('Ngày tham gia là bắt buộc');
+                    return false;
+                }
+
+                const today = new Date();
+                const next7Day = new Date(today.setDate(today.getDate() + 7));
+
+                if (inputNgay < next7Day) {
+                    $("#errNgay").html('Ngày tham gia phải sau ngày hiện tại 7 ngày');
+                    return false;
+                } else {
+                    $("#errNgay").html('*')
+                    return true;
+                }
+            }
+
+            let i = 1;
+
+            function submit() {
+                if (validateMSSV() && validateTen() && validateNgay() && validateEmail() && validateSDT()) {
+                    document.querySelector("#table-body").innerHTML += `<tr>
+                            <td>${i++}</td>
+                            <td>${$("#txtMa").val()}</td>
+                            <td>${$("#txtTen").val()}</td>
+                            <td>${$("#txtNgay").val()}</td>
+                            <td>${$("#txtEmail").val()}</td>
+                            <td>${$("#txtSDT").val()}</td>
+                        </tr>`;
+
+                    $("#inputModal").modal('hide');
+                }
+            }
+
+            $("#txtMa").on('input', validateMSSV);
+            $("#txtTen").on('input', validateTen);
+            $("#txtNgay").on('change', validateNgay)
+            $("#txtEmail").on('input', validateEmail);
+            $("#txtSDT").on('input', validateSDT);
+            $("#btn-save").on('click', submit)
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+.dssanpham .item{
+    border: 1px solid rgb(34,80,62);
+    border-radius: 5px;
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 1px 2px 4px #ddd;
+}
+.dssanpham .item img{
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover; 
+    transition: all 0.2s ease;
+}
+.dssanpham .item-thumb{
+    overflow: hidden;
+}
+.dssanpham .item .item-title{
+    font-size: 20px;
+    padding-top: 10px;
+    margin: 10px;
+    height: 75px;
+
+}
+.dssanpham .item .item-price{
+    font-size: 16px;
+    margin: 10px;
+}
+.dssanpham{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.dssanpham a:hover img{
+    transform: scale(1.1); 
+}
+
+.dssanpham a{
+    text-decoration: none;
+    color: black;
+}
+.dssanpham .item .item-btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn-primary{
+    display: block;
+    height: 42px;
+    margin-right: 10px;
+}
+
+.item-btn>.btn-primary{
+    background-color: white;
+    border: 1px solid rgb(34,80,62);
+}
+
+.btn-primary:hover i{
+    color: white;
+}
+.btn-primary:hover{
+    background-color: rgb(34,80,62);
+}
+.item-btn i{
+    color: rgb(34,80,62);
+    font-size: 20px;
+}
+
+.dssanpham .item .item-rate{
+    color: gold;
+    margin-left: 10px;
+}
+.btn-heart{
+    display: block;
+    width: 49px;
+    background-color: white;
+    border: 1px solid rgb(34,80,62);
+    height: 42px;
+    margin-right: 10px;
+}
+.btn-heart:hover i{
+    color: white;
+}
+.btn-heart:hover{
+    background-color: rgb(34,80,62);
+}

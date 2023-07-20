@@ -1,0 +1,25 @@
+p {
+    margin: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+#menucon {
+    position: absolute;
+    display: none;
+    background-color: white;
+    padding: 8px;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.nav-item:hover,
+#e1:hover {
+    background-color: #ccc;
+}
+
+#e1:hover #menucon {
+    display: flex;
+}

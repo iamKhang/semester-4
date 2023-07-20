@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+  <style>
+    .jumbotron {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron jumbotron-fluid m-lg-0"
+        style="background-image: url('../img/home_banner_web_11.png'); background-size: cover;">
+        <div class="">
+          <h1 class="display-8 float-right font-weight-bold text-danger">Đặt lịch khám chữa bệnh online</h1>
+        </div>
+      </div>
+    </div>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-primary mt-2 mb-2" data-toggle="modal" data-target="#exampleModal">
+      Đặt lịch
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Đặt lịch khám online:</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="ma-benh-nhan">Mã bệnh nhân:</label>
+                <input type="text" class="form-control" id="ma-benh-nhan">
+                <span id="errorMa" class="text-danger">*</span>
+              </div>
+              <div class="form-group">
+                <label for="mat-khau">Mật khẩu:</label>
+                <input type="password" class="form-control" id="mat-khau">
+                <span id="errorMK" class="text-danger">*</span>
+              </div>
+              <div class="form-group">
+                <label for="ngay-kham">Ngày khám:</label>
+                <input type="date" class="form-control" id="ngay-kham">
+                <span id="errorNgay" class="text-danger">*</span>
+              </div>
+              <div class="form-group">
+                <label>Loại dịch vụ:</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="kham-theo-yeu-cau" value="option1">
+                  <label class="form-check-label" for="kham-theo-yeu-cau">
+                    Khám bệnh theo yêu cầu
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="dieu-tri-ngoai-tru" value="option2">
+                  <label class="form-check-label" for="dieu-tri-ngoai-tru">
+                    Điều trị ngoại trú
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="bac-si-theo-yeu-cau" value="option3">
+                  <label class="form-check-label" for="bac-si-theo-yeu-cau">
+                    Bác sĩ theo yêu cầu
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="chuyen-khoa">Chuyên khoa:</label>
+                <select class="form-control" id="chuyen-khoa">
+                  <option>Ngoại tổng quát</option>
+                  <option>Nhi</option>
+                  <option>Nội tổng quát</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button id="btn_close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button id="btn_dangKi" type="button" class="btn btn-primary">Đặt lịch</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Mã bệnh nhân</th>
+                <th>Mật khẩu</th>
+                <th>Ngày khám</th>
+                <th>Phụ thu dịch vụ</th>
+                <th>Chuyên khoa</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script>
+      // Lấy các phần tử HTML
+      const maBNInput = document.getElementById("ma-benh-nhan");
+      const mkInput = document.getElementById("mat-khau");
+      const ngayKhamInput = document.getElementById("ngay-kham");
+      const errorMa = document.getElementById("errorMa");
+      const errorMK = document.getElementById("errorMK");
+      const errorNgay = document.getElementById("errorNgay");
+
+      // Bắt sự kiện input cho từng trường
+      maBNInput.addEventListener("input", validateMaBN);
+      mkInput.addEventListener("input", validateMK);
+      ngayKhamInput.addEventListener("input", validateNgayKham);
+
+      // Hàm kiểm tra mã bệnh nhân
+      function validateMaBN() {
+        const maBNRegex = /^BN-\d{5}$/;
+        if (!maBNRegex.test(maBNInput.value)) {
+          errorMa.textContent = "Mã bệnh nhân không hợp lệ";
+        } else {
+          errorMa.textContent = "";
+        }
+      }
+
+      // Hàm kiểm tra mật khẩu
+      function validateMK() {
+        const mkRegex = /^.{6,}$/;
+        if (!mkRegex.test(mkInput.value)) {
+          errorMK.textContent = "Mật khẩu phải chứa ít nhất 6 ký tự";
+        } else {
+          errorMK.textContent = "";
+        }
+      }
+
+      // Hàm kiểm tra ngày khám
+      function validateNgayKham() {
+        const ngayKham = new Date(ngayKhamInput.value);
+        const now = new Date();
+        if (ngayKham <= now) {
+          errorNgay.textContent = "Ngày khám phải sau ngày hiện tại";
+        } else {
+          errorNgay.textContent = "";
+        }
+      }
+
+      document.getElementById('btn_dangKi').addEventListener('click', function () {
+        // Lấy giá trị từ các trường input
+        var maBenhNhan = document.getElementById('ma-benh-nhan').value;
+        var matKhau = document.getElementById('mat-khau').value;
+        var ngayKham = document.getElementById('ngay-kham').value;
+        var chuyenKhoa = document.getElementById('chuyen-khoa').value;
+        var phuThuDichVu = 0;
+
+        // Xử lý giá trị checkbox
+        var khamTheoYeuCau = document.getElementById('kham-theo-yeu-cau').checked;
+        var dieuTriNgoaiTru = document.getElementById('dieu-tri-ngoai-tru').checked;
+        var bacSiTheoYeuCau = document.getElementById('bac-si-theo-yeu-cau').checked;
+
+        if (khamTheoYeuCau) {
+          phuThuDichVu += 500000;
+        }
+
+        if (dieuTriNgoaiTru) {
+          phuThuDichVu += 500000;
+        }
+
+        if (bacSiTheoYeuCau) {
+          phuThuDichVu += 500000;
+        }
+
+        // Tạo một dòng mới cho bảng
+        var tbody = document.getElementById('tbody');
+        var tr = document.createElement('tr');
+        var stt = tbody.children.length + 1;
+        tr.innerHTML = '<td>' + stt + '</td>' +
+          '<td>' + maBenhNhan + '</td>' +
+          '<td>' + matKhau + '</td>' +
+          '<td>' + ngayKham + '</td>' +
+          '<td>' + phuThuDichVu.toLocaleString() + '</td>' +
+          '<td>' + chuyenKhoa + '</td>';
+
+        // Thêm dòng mới vào bảng
+        tbody.appendChild(tr);
+
+        // Reset lại giá trị các trường input
+        document.getElementById('ma-benh-nhan').value = '';
+        document.getElementById('mat-khau').value = '';
+        document.getElementById('ngay-kham').value = '';
+        document.getElementById('chuyen-khoa').selectedIndex = 0;
+        document.getElementById('kham-theo-yeu-cau').checked = false;
+        document.getElementById('dieu-tri-ngoai-tru').checked = false;
+        document.getElementById('bac-si-theo-yeu-cau').checked = false;
+
+        // Đóng form modal
+        document.getElementById('exampleModal').classList.remove('show');
+        document.getElementById('exampleModal').setAttribute('aria-hidden', 'true');
+        document.querySelector('.modal-backdrop').remove();
+      });
+    </script>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+{"_id":{"$oid":"620a8bbb2c96dd44ef22230a"},"ten":"Nở","tuoi":22,"diem":9,"monHoc":["Toan","Ngu Van","Tin Hoc"],"totNghiep":null,"lienLac":{"email":"nơ@gmail.com","phone":"0999.987.222"}}
+{"_id":{"$oid":"620a8bbb2c96dd44ef22230b"},"ten":"Tí","tuoi":18,"diem":8,"monHoc":["Toan","Ngu Van","Tin Hoc"],"totNghiep":null,"lienLac":{"email":"ti@gmail.com","phone":"0999.987.111"}}
+{"_id":{"$oid":"620a8bbb2c96dd44ef22230c"},"ten":"Tèo","tuoi":20,"diem":8,"monHoc":["Toan","tiengAnh","lapTrinh"],"totNghiep":null,"lienLac":{"email":"teo@gmail.com","phone":"0999.987.123"}}
+{"_id":"23","ten":"Minh Hoang","tuoi":"26","diem":8,"monHoc":["Toan","tiengAnh","lapTrinh"],"totNghiep":null,"lienLac":{"email":"teo@gmail.com","phone":"0999.987.123"}}
+{"_id":{"$oid":"620aed63de2c0faae817c9fc"},"ten":"Minh","tuoi":20,"diem":8,"monHoc":["Toan","tiengAnh","lapTrinh"],"totNghiep":null,"lienLac":{"email":"teo@gmail.com","phone":"0999.987.123"}}
+{"_id":55,"ten":"Trung","tuoi":20,"diem":8,"monHoc":["Toan","tiengAnh"],"totNghiep":null,"lienLac":{"email":"teo@gmail.com","phone":"0999.987.123"}}
+{"_id":56,"ten":"Tuan","tuoi":20,"diem":8,"monHoc":["Toan","tiengAnh","lapTrinh"],"totNghiep":null,"lienLac":{"email":"teo@gmail.com","phone":"0999.987.123"}}
+{"_id":"57","ten":"Phuong","tuoi":20,"diem":8,"monHoc":["Toan","tiengAnh","lapTrinh"],"totNghiep":null,"lienLac":{"email":"teo@gmail.com","phone":"0999.987.123"}}
+{"_id":{"$oid":"620b512eca8e2c0148507503"},"ten":"Khanh","tuoi":20,"diem":8,"monHoc":["Toan","tiengAnh","lapTrinh"],"totNghiep":null,"lienLac":{"email":"teo@gmail.com","phone":"0999.987.123"}}

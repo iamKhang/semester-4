@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đoạn demo</title>
+  <style>
+    .large-text {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <button id="myButton">Nhấn đúp vào đây</button>
+  <p id="myText">Xin chào</p>
+
+  <script>
+    var button = document.getElementById("myButton");
+    button.addEventListener("click", toggleFontSize);
+
+    function toggleFontSize() {
+      var text = document.getElementById("myText");
+      text.classList.toggle("large-text");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="../css/index.css">
+
+    <style>
+        .container {
+            min-height: 500px;
+            border: 1px solid gray;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .cart {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 35px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(34, 80, 62);
+        }
+
+        .img_itemCart {
+            width: 70px;
+            height: 70px;
+            border-radius: 3px;
+            border: 1px solid rgb(176, 176, 176);
+        }
+
+        .listSanPham {
+            width: 90%;
+        }
+
+        .tbl_itemCart {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+
+        .tbl_itemCart th {
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .tbl_itemCart tr {
+            height: 80px;
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 1px solid whitesmoke;
+        }
+
+        .btn_delete {
+            font-size: 24px;
+            border: 0px;
+            border-radius: 3px;
+            background-color: white;
+        }
+
+        .footer_cart {
+            margin-bottom: 20px;
+            margin-top: 10px;
+            margin-right: 150px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            width: 100%;
+        }
+
+        .btn_footer {
+            border-radius: 5px;
+            height: 50px;
+            border: 0px;
+            background-color: rgb(34, 80, 62);
+            color: white;
+        }
+
+        .btn_accept {
+            width: 150px;
+
+        }
+
+        .btn_continue {
+            margin-right: 20px;
+            width: 170px;
+            background-color: white;
+            border: 1px solid rgb(34, 80, 62);
+            color: rgb(34, 80, 62);
+        }
+
+        .btn_continue:hover {
+            background-color: rgb(34, 80, 62);
+            color: white;
+        }
+
+        .btn_accept:hover {
+            background-color: white;
+            border: 1px solid rgb(34, 80, 62);
+            color: rgb(34, 80, 62);
+        }
+
+        .tongtien {
+            margin-left: 200px;
+            font-size: 24px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="container">
+        <div class="cart">
+            <h2 class="title">Giỏ hàng</h2>
+            <div class="listSanPham">
+
+            </div>
+            <div class="footer_cart">
+                <div class="tongtien d-flex">Tổng tiền: <p class="tt" style="margin-left: 10px;"></p>
+                </div>
+                <div class="btn_cart">
+                    <button class="btn_footer btn_continue">Tiếp tục mua hàng</button>
+                    <button class="btn_footer btn_accept" data-bs-toggle="modal" data-bs-target="#myModal">Đặt
+                        hàng</button>
+                </div>
+            </div>
+        </div>
+        <!-- The Modal -->
+        <div class="modal col-10" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header d-flex justify-content-center m-lg-0">
+                        <h4 class="modal-title m-lg-0">Thông tin đơn đặt hàng</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form id="form-datHang">
+                            <div class="form-group">
+                                <label for="name-input">Họ và tên:</label>
+                                <input type="text" class="form-control" id="name-input" placeholder="Nhập họ và tên">
+                                <span id="errorName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone-input">Số điện thoại:</label>
+                                <input type="tel" class="form-control" id="phone-input"
+                                    placeholder="Nhập số điện thoại">
+                                <span id="errorPhone" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email-input">Địa chỉ email:</label>
+                                <input type="email" class="form-control" id="email-input"
+                                    placeholder="Nhập địa chỉ email">
+                                <span id="errorEmail" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="address-input">Địa chỉ:</label>
+                                <textarea class="form-control" id="address-input" rows="3"
+                                    placeholder="Nhập địa chỉ"></textarea>
+                                <span id="errorAddress" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="note-input">Ghi chú:</label>
+                                <textarea class="form-control" id="note-input" rows="3"
+                                    placeholder="Nhập ghi chú"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="payment-method">Phương thức thanh toán:</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="payment-method" id="vn-pay"
+                                        value="vn-pay">
+                                    <label class="form-check-label" for="vn-pay">Thanh toán qua VNPAY</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="payment-method"
+                                        id="bank-transfer" value="bank-transfer">
+                                    <label class="form-check-label" for="bank-transfer">Thanh toán qua tài khoản ngân
+                                        hàng</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="payment-method" id="cod"
+                                        value="cod">
+                                    <label class="form-check-label" for="cod">Thanh toán khi nhận hàng (COD)</label>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer m-0">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="btn-xacNhan">Xác nhận</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer id="footer"></footer>
+    <script src="../js/index.js" type="module"></script>
+    <script>
+        let cartItems = JSON.parse(localStorage.getItem('cartItems'));
+
+        let HTML = document.querySelector(".listSanPham");
+        let cart = document.querySelector(".cart");
+        if (cartItems.length == 0) {
+            cart.innerHTML = `<h2 class="title">Giỏ hàng</h2>
+            <div style="font-size:80px; margin-top:20px;margin-bottom:20px"><i class="fa-regular fa-bag-shopping"></i></div>
+            <div style="font-size:24px">Giỏ hàng của bạn hiện không có sản phẩm nào</div>`;
+        } else {
+            let html = `<table class="d-flex tbl_itemCart">
+                <tr>
+                <th></th>
+                <th>Tên sản phẩm</th>
+                <th>Dung tích</th>
+                <th>Số lượng</th>
+                <th>Tổng tiền</th>
+                <th></th>
+                </tr>`;
+            for (let i = 0; i < cartItems.length; i++) {
+                let sp = cartItems[i];
+                html += `<tr class="item_cart">
+                    <td><img src=".${cartItems[i].anh}" alt="" class="img_itemCart"></td>
+                    <td>${cartItems[i].name}</td>
+                    <td>${cartItems[i].ml}</td>
+                    <td>${cartItems[i].quantity}</td>
+                    <td>${cartItems[i].quantity * cartItems[i].price}</td>
+                    <td><button class="btn_delete" onclick=\'removeCartItem(\`${sp.id}\`);\'><i class="fa-solid fa-trash-can"></i></button></td>
+                    </tr>`;
+            }
+            html += `</table>`;
+            HTML.innerHTML = html;
+        }
+        function removeCartItem(cartItemID) {
+            let index = cartItems.findIndex(item => item.id === cartItemID);
+            if (index !== -1)
+                cartItems.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            location.reload();
+        }
+        let tongtien = document.querySelector(".tt");
+        let tt = 0;
+        for (let i = 0; i < cartItems.length; i++) {
+            tt += (cartItems[i].quantity * cartItems[i].price);
+        }
+        tongtien.innerHTML = `<p>${tt} VNĐ</p>`;
+
+        
+        const nameInput = document.getElementById('name-input');
+        const errorName = document.getElementById('errorName');
+
+        nameInput.addEventListener('input', function () {
+            const regex = /^[a-zA-Z\s]*$/;
+            const value = nameInput.value.trim();
+
+            if (regex.test(value)) {
+                errorName.innerHTML = '';
+            } else {
+                errorName.innerHTML = 'Tên không hợp lệ';
+            }
+        });
+
+        const phoneInput = document.getElementById('phone-input');
+        const errorPhone = document.getElementById('errorPhone');
+
+        phoneInput.addEventListener('input', function () {
+            const regex = /^[0-9]{10,11}$/;
+            const value = phoneInput.value.trim();
+
+            if (regex.test(value)) {
+                errorPhone.innerHTML = '';
+            } else {
+                errorPhone.innerHTML = 'Số điện thoại không hợp lệ';
+            }
+        });
+
+        const emailInput = document.getElementById('email-input');
+        const errorEmail = document.getElementById('errorEmail');
+
+        emailInput.addEventListener('input', function () {
+            const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const value = emailInput.value.trim();
+
+            if (regex.test(value)) {
+                errorEmail.innerHTML = '';
+            } else {
+                errorEmail.innerHTML = 'Địa chỉ email không hợp lệ';
+            }
+        });
+
+        const btnXacNhan = document.getElementById('btn-xacNhan'); // Lấy nút xác nhận
+
+        btnXacNhan.addEventListener('click', function () { // Thêm sự kiện click cho nút xác nhận
+            const ten = document.getElementById('name-input').value.trim(); // Lấy giá trị trường tên và xóa khoảng trắng ở đầu và cuối chuỗi
+            const sdt = document.getElementById('phone-input').value.trim(); // Lấy giá trị trường số điện thoại và xóa khoảng trắng ở đầu và cuối chuỗi
+            const diaChi = document.getElementById('address-input').value.trim(); // Lấy giá trị trường địa chỉ và xóa khoảng trắng ở đầu và cuối chuỗi
+
+            if (ten === '') { // Nếu trường tên rỗng
+                document.getElementById('errorName').innerText = 'Vui lòng nhập tên của bạn'; // Hiển thị thông báo lỗi
+            } else {
+                document.getElementById('errorName').innerText = ''; // Xóa thông báo lỗi nếu trường tên không rỗng
+            }
+
+            if (sdt === '') { // Nếu trường số điện thoại rỗng
+                document.getElementById('errorPhone').innerText = 'Vui lòng nhập số điện thoại của bạn'; // Hiển thị thông báo lỗi
+            } else {
+                document.getElementById('errorPhone').innerText = ''; // Xóa thông báo lỗi nếu trường số điện thoại không rỗng
+            }
+
+            if (diaChi === '') { // Nếu trường địa chỉ rỗng
+                document.getElementById('errorAddress').innerText = 'Vui lòng nhập địa chỉ của bạn'; // Hiển thị thông báo lỗi
+            } else {
+                document.getElementById('errorAddress').innerText = ''; // Xóa thông báo lỗi nếu trường địa chỉ không rỗng
+            }
+            const form = document.querySelector("#form-datHang");
+            if(ten!=''||sdt!=''||diaChi!=''){
+                // Hiển thị thông báo đăng ký thành công
+                alert("Đăng ký thành công!");
+                // Reload form
+                form.reset();
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

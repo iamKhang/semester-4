@@ -1,0 +1,41 @@
+{
+  "_id": "A006",
+  "tenNuocHoa": "Maison Margiela Replica Jazz Club EDT",
+  "DanhGia": "",
+  "tinhTrang": "Còn Hàng",
+  "gia": [
+    "385000",
+	"2950000"
+  ],
+  "moTa": "Nước hoa Replica Jazz Club có nhiều điều thú vị bởi một chuỗi nốt hương của tiêu hồng, húng tây, vanilla, tinh dầu cam, thuốc lá và rượu mạnh. Anh có thể cảm nhận ngay mùi hương bao trùm một khoảng không cố định. Nhưng rồi cũng tan ngay bởi âm hưởng du dương của điệu Jazz cùng với ly rượu Rhum bên cạnh làn khói thuốc cứ nhẹ nhàng phảng phất.",
+  "gioiTinh": "Nam",
+  "xuatXu": "Pháp",
+  "dungTich": [
+  "Chiết 10ml",
+    "Fullbox 100ml"
+  ],
+  "thongTinSanPham": {
+    "nhomNuocHoa": "Leather – tông da thuộc",
+    "gioiTinh": "Nam",
+    "doTuoiKhuyenDung": "Trên 25",
+    "namRaMat": {
+      "$date": {
+        "$numberLong": "2017"
+      }
+    },
+    "nongDo": "EDP",
+    "nhaPhaChe": "Aurelien Guichard",
+    "doLuuHuong": "7-12h",
+    "phongCach": [
+      "Cá tính",
+      "Hiện đại",
+      "Trẻ trung"
+    ]
+  },
+  "anh": "T:\\HeThongVaCongNgheWeb\\anhDemo.jfif",
+  "anhLienQuan": [
+    "T:\\HeThongVaCongNgheWeb\\anhDemo.jfif",
+    "T:\\HeThongVaCongNgheWeb\\anhDemo.jfif",
+    "T:\\HeThongVaCongNgheWeb\\anhDemo.jfif"
+  ]
+}

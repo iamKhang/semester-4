@@ -1,0 +1,104 @@
+{"ma": "Ya001","ten": "Yamaha","namsx": 1992,"gia": 12000000,"hinhanh": "h2.jpg","loai": { "maloai": "001Xemay","tenloai":"Xe máy"}}
+{"ma": "Fd006","ten": "Ford","namsx": 1999,"gia": 555000000,"hinhanh": "h3.jpg","loai":  { "maloai": "001Oto",  "tenloai":"Ô tô"}}
+{
+  "ma": "Fd005",
+  "ten": "Ford",
+  "namsx": 2009,
+  "gia": 655000000,
+  "hinhanh": "h3.jpg",
+  "loai":{
+   "maloai": "001Oto",
+    "tenloai":"Ô tô"
+  }
+  
+}{
+  "ma": "Fd010",
+  "ten": "Ford",
+  "namsx": 2001,
+  "gia": 655000000,
+  "hinhanh": "h3.jpg",
+  "loai":  {
+   "maloai": "001Oto",
+    "tenloai":"Ô tô"
+  }
+}{
+  "ma": "Fd110",
+  "ten": "Ford",
+  "namsx": 2002,
+  "gia": 755000000,
+  "hinhanh": "h3.jpg",
+  "loai":{
+   "maloai": "001Oto",
+    "tenloai":"Ô tô"
+  }
+}{
+  "ma": "Ya002",
+  "ten": "Yamaha",
+  "namsx": 1992,
+  "gia": 14000000,
+  "hinhanh": "h2.jpg",
+  "loai": {
+    "maloai":"001Xemay",
+    "tenloai":"Xe gắn máy"
+  }
+}{
+  "ma": "Hd002",
+  "ten": "Honda",
+  "namsx": 1990,
+  "gia": 10000000,
+  "hinhanh": "h1.jpg",
+  "loai": {
+    "maloai":"002Xemay",
+    "tenloai":"Xe gắn máy"
+  }
+}{
+  "ma": "Hd001",
+  "ten": "Honda",
+  "namsx": 1990,
+  "gia": 5000000,
+  "hinhanh": "h1.jpg",
+  "loai": {
+    "maloai":"002Xemay",
+    "tenloai":"Xe gắn máy"
+  }
+}{
+  "ma": "Ya003",
+  "ten": "Yamaha",
+  "namsx": 1992,
+  "gia": 13000000,
+  "hinhanh": "h2.jpg",
+  "loai": {
+    "maloai":"001Xemay",
+    "tenloai":"Xe gắn máy"
+  }
+}{
+  "ma": "Hd003",
+  "ten": "Honda",
+  "namsx": 1990,
+  "gia": 25000000,
+  "hinhanh": "h1.jpg",
+  "loai": {
+    "maloai":"002Xemay",
+    "tenloai":"Xe gắn máy"
+  }
+}{
+  "ma": "Hd004",
+  "ten": "Honda",
+  "namsx": 1990,
+  "gia": 15000000,
+  "hinhanh": "h1.jpg",
+  "loai": {
+    "maloai":"002Xemay",
+    "tenloai":"Xe gắn máy"
+  }
+}{
+  "ma": "Ya004",
+  "ten": "Yamaha",
+  "namsx": 1992,
+  "gia": 8000000,
+  "hinhanh": "h2.jpg",
+  "loai": {
+    "maloai":"001Xemay",
+    "tenloai":"Xe gắn máy"
+  }
+}
